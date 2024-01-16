@@ -22,7 +22,10 @@ export const Login = props => {
         clearNotifications();
     }, [clearNotifications]);
 
-    const { signUpEnabled, localLoginsDisabled } = useAuthenticationConfiguration();
+    const {
+        signUpEnabled,
+        localLoginsDisabled,
+    } = useAuthenticationConfiguration();
 
     const checkAuth = useCheckAuth();
     const redirect = useRedirect();

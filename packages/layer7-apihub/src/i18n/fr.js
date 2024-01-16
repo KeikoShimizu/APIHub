@@ -681,6 +681,41 @@ const apiHubMessages = {
             },
         },
     },
+    landingpage: {
+        header: {
+            navigation: {
+                New_Register_Now: 'Nouveau ? Inscrivez-vous maintenant',
+                explore_apis: 'Explorer les API',
+                support: 'Support',
+            },
+            button: {
+                sign_in: 'se connecter',
+            },
+        },
+        main: {
+            hero: {
+                header: 'This is French',
+            },
+            api_collection: {
+                header: {
+                    title: 'Commencez à développer avec BSB',
+                    content:
+                        'French Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                },
+                api_card: {
+                    learn_more: 'Apprendre encore plus',
+                },
+            },
+        },
+        footer: {
+            navigation: {
+                explore_apis: 'Explorer les API',
+                contact: 'Contactez-nous',
+                faq: 'FAQ',
+            },
+            copyright: 'Tous Droits Réservés',
+        },
+    },
 };
 
 export default mergeTranslations(raMessages, apiHubMessages);
