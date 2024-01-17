@@ -555,6 +555,7 @@ const apiHubMessages = {
             },
         },
     },
+    // Landingpage / Here is the Opject for language selection.
     landingpage: {
         header: {
             navigation: {
@@ -574,7 +575,7 @@ const apiHubMessages = {
                 header: {
                     title: 'Inizia a sviluppare con BSB',
                     content:
-                        'Italian Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                        'Italian Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                 },
                 api_card: {
                     learn_more: 'Saperne di più',

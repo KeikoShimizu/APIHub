@@ -8,7 +8,7 @@ import classnames from 'classnames';
 
 export const LocaleSwitcherMenu = props => {
     const [anchorEl, setAnchorEl] = useState(null);
-    const { onChange, locale, locales, className, ...rest } = props;
+    const { onChange, locale, locales, className, page, ...rest } = props;
     const classes = useStyles(props);
 
     const open = Boolean(anchorEl);
@@ -21,6 +21,9 @@ export const LocaleSwitcherMenu = props => {
         handleClose();
     };
 
+    //Color set for landing page
+    const textColour = page === 'landingpage' ? 'black' : 'none';
+
     return (
         <>
             <Button
@@ -31,6 +34,7 @@ export const LocaleSwitcherMenu = props => {
                 className={classnames(classes.button, className)}
                 onClick={handleMenu}
                 endIcon={<ArrowDropDownIcon />}
+                style={{ color: textColour }}
                 {...rest}
             >
                 {locales[locale]}

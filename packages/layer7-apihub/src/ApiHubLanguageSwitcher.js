@@ -4,7 +4,7 @@ import { useSetLocale, useLocale } from 'ra-core';
 import { LocaleSwitcherMenu, supportedLocales, defaultLocale } from './i18n';
 import { useApiHubPreference } from './preferences';
 
-export const ApiHubLanguageSwitcher = () => {
+export const ApiHubLanguageSwitcher = ({ page }) => {
     const setLocale = useSetLocale();
     const locale = useLocale();
 
@@ -29,6 +29,7 @@ export const ApiHubLanguageSwitcher = () => {
 
     return (
         <LocaleSwitcherMenu
+            page={page}
             locale={locale}
             locales={supportedLocales}
             onChange={handleLocaleChange}

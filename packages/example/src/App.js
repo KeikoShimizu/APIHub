@@ -57,9 +57,9 @@ const App = () => {
             customReducers={{ theme: themeReducer }}
             i18nProvider={i18nProvider(defaultLocaleFromPreferences)}
             initialState={initialState}
-            // Add new page router as customRoutes
+            // ==> LandingPage / * Add new page router here as customRoutes * <==
             customRoutes={[
-                <Route path="/landingpage" component={LandingPage} noLayout />,
+                <Route path="/landingpage" component={LandingPage} noLayout />, //noLayout (Set "noLayout" if you need blank page.)
                 <Route path="/test" component={TestPage} />,
             ]}
         />
