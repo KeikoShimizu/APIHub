@@ -54,7 +54,10 @@ export const LandingPageFooter = () => {
 
 const useStyles = makeStyles(theme => ({
     root: {
-        backgroundColor: '#F15A24',
+        backgroundImage: 'url(/besafebank-footer-bg-1.jpg)',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'left',
         padding: '10px 10px 10px 90px',
         display: 'flex',
         flexDirection: 'row',

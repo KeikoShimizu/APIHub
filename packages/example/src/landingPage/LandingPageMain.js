@@ -22,21 +22,21 @@ export const LandingPageMain = () => {
                 <Typography variant="h2">
                     {translate('landingpage.main.hero.header')}
                 </Typography>
-                <img src="/besafebank-hero.png" alt="bank hero" />
+                <img src="/besafebank-hero-dots.jpg" alt="bank hero" />
             </section>
 
             <section id="explore-api">
-                <Box className={classes.apitainer}>
+                <Box className={classes.apicontainer}>
                     <Typography variant="h3">
                         {translate(
                             'landingpage.main.api_collection.header.title'
                         )}
                     </Typography>
-                    <p>
+                    <Typography variant="subtitle1">
                         {translate(
                             'landingpage.main.api_collection.header.content'
                         )}
-                    </p>
+                    </Typography>
                 </Box>
                 <LandingPageApiList />
             </section>
@@ -47,12 +47,13 @@ export const LandingPageMain = () => {
 const useStyles = makeStyles(theme => ({
     herocontainer: {
         position: 'relative',
-        height: '370px',
+        // height: '370px',
+        height: 'auto',
         [theme.breakpoints.up('md')]: {
             position: 'unset',
             display: 'grid',
             alignItems: 'center',
-            gridTemplateColumns: '1fr 1fr',
+            gridTemplateColumns: '1fr auto',
             backgroundColor: '#F15A24',
         },
         '& h2': {
@@ -79,10 +80,11 @@ const useStyles = makeStyles(theme => ({
             objectPosition: 'center',
             display: 'block',
             margin: 'auto',
-            height: '370px',
+            // height: '370px',
+            height: 'auto',
         },
     },
-    apitainer: {
+    apicontainer: {
         backgroundColor: '#E6E6E6',
         padding: '10px',
         display: 'flex',

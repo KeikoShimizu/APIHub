@@ -28,10 +28,14 @@ export const ApiCard = ({ apiData, key }) => {
             key={key}
         >
             <CardContent>
-                <Typography variant="h4" className={classes.cardtitle}>
+                <Typography
+                    variant="h5"
+                    className={classes.cardtitle}
+                    sx={{ color: '#006837' }}
+                >
                     {apiData.label}
                 </Typography>
-                <Typography>{apiData.content}</Typography>
+                <Typography variant="body1">{apiData.content}</Typography>
             </CardContent>
             <Divider
                 light
@@ -43,7 +47,10 @@ export const ApiCard = ({ apiData, key }) => {
                     {translate(
                         'landingpage.main.api_collection.api_card.learn_more'
                     )}
-                    <ArrowForwardOutlinedIcon className={classes.arrowicon} />
+                    <ArrowForwardOutlinedIcon
+                        className={classes.arrowicon}
+                        sx={{ marginLeft: '5px' }}
+                    />
                 </Link>
             </CardActions>
         </Card>
@@ -97,10 +104,6 @@ const useStyles = makeStyles(theme => ({
             margin: 'auto',
         },
     },
-    cardtitle: {
-        color: '#006837',
-        fontSize: '10px',
-    },
     learnmore: {
         paddingLeft: '8px',
         justifyContent: 'flex-end',
@@ -114,9 +117,5 @@ const useStyles = makeStyles(theme => ({
             textDecoration: 'none',
             paddingLeft: '8px',
         },
-    },
-    arrowicon: {
-        width: '100px',
-        marginLeft: '5px',
     },
 }));
