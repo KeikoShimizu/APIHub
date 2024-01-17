@@ -14,7 +14,7 @@ import { AuthSchemeList, LoginToolbar } from '.';
 import { useAuthSchemes, usePasswordEncryption } from '..';
 
 export const LoginForm = props => {
-    const { toolbarProps,localLoginsDisabled, ...rest } = props;
+    const { toolbarProps, localLoginsDisabled, ...rest } = props;
 
     const login = useLogin();
     const classes = useStyles(rest);
@@ -31,9 +31,9 @@ export const LoginForm = props => {
     const [error, setError] = useState(null);
     const [authScheme, setAuthScheme] = useState(null);
 
-	useEffect(() => {
-		setAuthScheme(defaultAuthScheme);
-	}, [defaultAuthScheme]);
+    useEffect(() => {
+        setAuthScheme(defaultAuthScheme);
+    }, [defaultAuthScheme]);
 
     const submit = async ({ username, password }) => {
         setError(null);
@@ -57,12 +57,12 @@ export const LoginForm = props => {
         }
 
         try {
-            if(!params.provider && localLoginsDisabled) {
+            if (!params.provider && localLoginsDisabled) {
                 setError('apihub.login.notifications.local_logins_disabled');
             } else {
                 await login(params);
             }
-        } catch(error) {
+        } catch (error) {
             console.error(error.message);
             setError('apihub.login.notifications.invalid_credentials');
         }
@@ -79,41 +79,42 @@ export const LoginForm = props => {
 
     return (
         <>
-          { credsReqd && (
-            <SimpleForm
-                className={classes.form}
-                save={submit}
-                toolbar={
-                    <LoginToolbar
-                        loading={isLoading}
-                        error={error}
-                        {...toolbarProps}
+            {credsReqd && (
+                <SimpleForm
+                    className={classes.form}
+                    save={submit}
+                    toolbar={
+                        <LoginToolbar
+                            loading={isLoading}
+                            error={error}
+                            {...toolbarProps}
+                        />
+                    }
+                    {...props}
+                >
+                    <TextInput
+                        source="username"
+                        type="text"
+                        label="apihub.login.fields.username"
+                        variant="outlined"
+                        fullWidth
+                        validate={required()}
                     />
-                }
-                {...props}
-            >
-                <TextInput
-                    source="username"
-                    type="text"
-                    label="apihub.login.fields.username"
-                    variant="outlined"
-                    fullWidth
-                    validate={required()}
-                />
-                <PasswordInput
-                    source="password"
-                    label="apihub.login.fields.password"
-                    variant="outlined"
-                    fullWidth
-                    validate={required()}
-                />
-            </SimpleForm> ) }
-            { !localLoginsDisabled ? (
-            <Typography variant="body1">
-                <Link component={RouterLink} to="/reset-password">
-                    {translate('apihub.login.actions.forgot_password')}
-                </Link>
-            </Typography>
+                    <PasswordInput
+                        source="password"
+                        label="apihub.login.fields.password"
+                        variant="outlined"
+                        fullWidth
+                        validate={required()}
+                    />
+                </SimpleForm>
+            )}
+            {!localLoginsDisabled ? (
+                <Typography variant="body1">
+                    <Link component={RouterLink} to="/reset-password">
+                        {translate('apihub.login.actions.forgot_password')}
+                    </Link>
+                </Typography>
             ) : null}
             {authSchemes.length > 0 ? (
                 <AuthSchemeList

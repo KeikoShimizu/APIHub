@@ -2,7 +2,7 @@
     console.log('Loading dev config');
 
     window.APIHUB_CONFIG = {
-        PAGE_TITLE: '(dev) Layer 7 Apihub | Broadcom',
+        PAGE_TITLE: 'BesafeBank',
         APIHUB_URL: 'https://apim.dev.ca.com',
         TENANT_NAME: 'apim',
         ORIGIN_HUB_NAME: 'apim',

@@ -13,6 +13,7 @@ import {
 import { Layout, HomePage } from './layout';
 import { themeReducer } from './theme';
 import { i18nProvider } from './i18n/i18nProvider';
+import { LandingPage } from '../src/landingPage';
 import { TestPage } from './TestPage';
 
 const App = () => {
@@ -56,7 +57,11 @@ const App = () => {
             customReducers={{ theme: themeReducer }}
             i18nProvider={i18nProvider(defaultLocaleFromPreferences)}
             initialState={initialState}
-            customRoutes={[<Route path="/test" component={TestPage} />]}
+            // ==> LandingPage / * Add new page router here as customRoutes * <==
+            customRoutes={[
+                <Route path="/landingpage" component={LandingPage} noLayout />, //noLayout (Set "noLayout" if you need blank page.)
+                <Route path="/test" component={TestPage} />,
+            ]}
         />
     );
 };

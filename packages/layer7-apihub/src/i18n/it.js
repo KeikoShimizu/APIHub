@@ -555,6 +555,42 @@ const apiHubMessages = {
             },
         },
     },
+    // Landingpage / Here is the Opject for language selection.
+    landingpage: {
+        header: {
+            navigation: {
+                New_Register_Now: 'Nuovo? Registrati ora',
+                explore_apis: 'Esplora le API',
+                support: 'Supporto',
+            },
+            button: {
+                sign_in: 'Accedi',
+            },
+        },
+        main: {
+            hero: {
+                header: 'This is Italian',
+            },
+            api_collection: {
+                header: {
+                    title: 'Inizia a sviluppare con BSB',
+                    content:
+                        'Italian Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                },
+                api_card: {
+                    learn_more: 'Saperne di più',
+                },
+            },
+        },
+        footer: {
+            navigation: {
+                explore_apis: 'Esplora le API',
+                contact: 'Contattaci',
+                faq: 'FAQ',
+            },
+            copyright: 'Tutti i diritti riservati',
+        },
+    },
 };
 
 export default mergeTranslations(raMessages, apiHubMessages);
