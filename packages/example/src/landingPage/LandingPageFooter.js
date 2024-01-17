@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 
@@ -9,7 +9,6 @@ import { useTranslate } from 'react-admin';
 
 export const LandingPageFooter = () => {
     const classes = useStyles();
-    const theme = useTheme();
 
     //Landingpage ==== Language option menu ====
     // 1) Import "useTranslate" from react-admin.

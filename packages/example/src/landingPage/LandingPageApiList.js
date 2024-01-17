@@ -10,11 +10,10 @@ import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
 import { Link } from 'react-router-dom';
 import { useTranslate } from 'react-admin';
-import { makeStyles, useTheme } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 
 export const ApiCard = ({ apiData, key }) => {
     const classes = useStyles();
-    const theme = useTheme();
 
     //Landingpage ==== Language option menu ====
     // 1) Import "useTranslate" from react-admin.

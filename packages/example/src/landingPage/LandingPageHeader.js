@@ -7,13 +7,12 @@ import Button from '@mui/material/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import { useTranslate } from 'react-admin';
-import { makeStyles, useTheme } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 
 import { ApiHubLanguageSwitcher } from 'layer7-apihub';
 
 export const LandingPageHeader = () => {
     const classes = useStyles();
-    const theme = useTheme();
 
     //Landingpage ==== Language option menu ====
     //Import "ApiHubLanguageSwitcher" component from "layer7-apihub"
