@@ -98,6 +98,7 @@ const useStyles = makeStyles(theme => ({
         '& a': {
             color: 'black',
             textDecoration: 'none',
+            fontSize: '14px',
         },
     },
     topMainNav: {
