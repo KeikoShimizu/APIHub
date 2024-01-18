@@ -25,8 +25,8 @@ export const LandingPageMain = () => {
                 <img src="/besafebank-hero-dots.jpg" alt="bank hero" />
             </section>
 
-            <section id="explore-api">
-                <Box className={classes.apicontainer}>
+            <section id="explore-api" className={classes.apicontainer}>
+                <Box className={classes.apititle}>
                     <Typography variant="h3">
                         {translate(
                             'landingpage.main.api_collection.header.title'
@@ -47,31 +47,36 @@ export const LandingPageMain = () => {
 const useStyles = makeStyles(theme => ({
     herocontainer: {
         position: 'relative',
-        // height: '370px',
         height: 'auto',
         [theme.breakpoints.up('md')]: {
             position: 'unset',
             display: 'grid',
             alignItems: 'center',
-            gridTemplateColumns: '1fr auto',
+            gridTemplateColumns: '1fr 1fr',
             backgroundColor: '#F15A24',
+            gap: '10px',
         },
         '& h2': {
-            textShadow: '3px 1px 2px #CEBFB9',
-            position: 'absolute',
-            width: '100%',
-            top: '0',
-            left: '0',
-            right: '0',
-            bottom: '0',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            // textShadow: '3px 1px 2px #CEBFB9',
+            // position: 'absolute',
+            // width: '100%',
+            // top: '0',
+            // left: '0',
+            // right: '0',
+            // bottom: '0',
+            // display: 'flex',
+            // alignItems: 'center',
+            // justifyContent: 'center',
+            // textAlign: 'center',
+            display: 'none',
             [theme.breakpoints.up('md')]: {
+                display: 'grid',
                 position: 'unset',
                 textAlign: 'center',
                 color: 'white',
                 textShadow: 'unset',
+                fontSize: '42px',
+                margin: '0 10px',
             },
         },
         '& img': {
@@ -80,17 +85,24 @@ const useStyles = makeStyles(theme => ({
             objectPosition: 'center',
             display: 'block',
             margin: 'auto',
-            // height: '370px',
             height: 'auto',
         },
     },
     apicontainer: {
+        // display: 'flex',
+        // flexDirection: 'column',
+        // alignItems: 'center',
+    },
+    apititle: {
         backgroundColor: '#E6E6E6',
-        padding: '10px',
+        padding: '10px 10px 20px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         gap: '10px',
+        [theme.breakpoints.up('md')]: {
+            padding: '20px 80px',
+        },
         '& h3': {
             fontSize: '28px',
             textAlign: 'center',
@@ -98,11 +110,9 @@ const useStyles = makeStyles(theme => ({
                 fontSize: '40px',
             },
         },
-        '& p': {
+        '& h6': {
             margin: '0',
-            [theme.breakpoints.up('md')]: {
-                fontSize: '20px',
-            },
+            textAlign: 'center',
         },
     },
 }));
