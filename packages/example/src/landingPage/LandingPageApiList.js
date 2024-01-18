@@ -24,14 +24,19 @@ export const ApiCard = ({ apiData, key }) => {
     return (
         <Card
             variant="outlined"
-            sx={{ maxWidth: 360, backgroundColor: '#F9D9D2', border: 'none' }}
+            sx={{
+                maxWidth: 380,
+                backgroundColor: '#F9D9D2',
+                border: 'none',
+                padding: ' 12px',
+            }}
             key={key}
         >
             <CardContent>
                 <Typography
                     variant="h5"
                     className={classes.cardtitle}
-                    sx={{ color: '#006837' }}
+                    sx={{ color: '#006837', marginBottom: '10px' }}
                 >
                     {apiData.label}
                 </Typography>
@@ -64,20 +69,22 @@ export const LandingPageApiList = () => {
     // Modify data object for API data card on Landing page.
     const staticAPIDataList = [
         {
-            label: 'API Hub1',
-            content: 'This is the API 1 from APIHub by Broadcom.com.',
+            label: 'Accounts API',
+            content: 'This is Accounts API from APIHub by Broadcom.com.',
         },
         {
-            label: 'API Hub2',
-            content: 'This is the API 2 from APIHub by Broadcom.com.',
+            label: 'Account Balances API',
+            content:
+                'This is Account Balances API from APIHub by Broadcom.com.',
         },
         {
-            label: 'API Hub 3',
-            content: 'This is the API 3 from APIHub by Broadcom.com.',
+            label: 'Account Transactions API',
+            content:
+                'This is Account Transactions API from APIHub by Broadcom.com.',
         },
         {
-            label: 'API Hub 4',
-            content: 'This is the API 4 from APIHub by Broadcom.com.',
+            label: 'Mortgage Rates API',
+            content: 'This is Mortgage Rates API from APIHub by Broadcom.com.',
         },
     ];
     return (
@@ -91,15 +98,15 @@ export const LandingPageApiList = () => {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        padding: '10px 0',
+        padding: '30px 10px',
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
         justifyItems: 'center',
         alignItems: ' center',
         gap: '20px',
-        maxWidth: '1179px',
+        maxWidth: '900px',
         [theme.breakpoints.up('md')]: {
-            padding: '100px 0',
+            padding: '80px 0',
             gap: '40px',
             margin: 'auto',
         },

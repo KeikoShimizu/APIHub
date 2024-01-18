@@ -686,7 +686,7 @@ const apiHubMessages = {
         header: {
             navigation: {
                 New_Register_Now: 'Nouveau ? Inscrivez-vous maintenant',
-                explore_apis: 'Explorer les API',
+                explore_apis: "Explorer le catalogue d'API",
                 support: 'Support',
             },
             button: {
@@ -695,13 +695,14 @@ const apiHubMessages = {
         },
         main: {
             hero: {
-                header: 'This is French',
+                header:
+                    'BSB est le meilleur pour assurer la sécurité de vos transactions',
             },
             api_collection: {
                 header: {
                     title: 'Commencez à développer avec BSB',
                     content:
-                        'French Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                        "Commencez à développer vos API avec le programme de gestion d'API de pointe de BeSafe Bank qui vous permet d'accéder en toute sécurité aux données bancaires et de les intégrer à votre marque d'entreprise.",
                 },
                 api_card: {
                     learn_more: 'Apprendre encore plus',
@@ -710,7 +711,7 @@ const apiHubMessages = {
         },
         footer: {
             navigation: {
-                explore_apis: 'Explorer les API',
+                explore_apis: "Explorer le catalogue d'API",
                 contact: 'Contactez-nous',
                 faq: 'FAQ',
             },
