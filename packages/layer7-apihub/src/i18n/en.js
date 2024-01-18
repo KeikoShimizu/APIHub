@@ -659,12 +659,12 @@ const apiHubMessages = {
             },
         },
     },
-    // Landingpage / Here is the Opject for language selection.
+    // Landingpage / Here is the Object for language selection.
     landingpage: {
         header: {
             navigation: {
                 New_Register_Now: 'New? Register Now',
-                explore_apis: 'Explore API Catalog',
+                explore_apis: 'Explore APIs',
                 support: 'Support',
             },
             button: {
@@ -679,7 +679,7 @@ const apiHubMessages = {
                 header: {
                     title: 'Start developing with BSB',
                     content:
-                        "Start developing your API's with BeSafe Bank's leading edge API Management Program that enables you to securely access banking data and wrap it with your corporate brand.",
+                        "Start developing your APIs with BeSafe Bank's leading edge API Management Program that enables you to securely access banking data and wrap it with your corporate brand.",
                 },
                 api_card: {
                     learn_more: 'Learn more',
@@ -688,7 +688,7 @@ const apiHubMessages = {
         },
         footer: {
             navigation: {
-                explore_apis: 'Explore API Catalog',
+                explore_apis: 'Explore APIs',
                 contact: 'Contact Us',
                 faq: 'FAQ',
             },

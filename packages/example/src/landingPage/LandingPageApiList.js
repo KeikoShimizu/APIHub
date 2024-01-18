@@ -25,7 +25,7 @@ export const ApiCard = ({ apiData, key }) => {
         <Card
             variant="outlined"
             sx={{
-                maxWidth: 380,
+                width: 380,
                 backgroundColor: '#F9D9D2',
                 border: 'none',
                 padding: ' 12px',
@@ -40,7 +40,9 @@ export const ApiCard = ({ apiData, key }) => {
                 >
                     {apiData.label}
                 </Typography>
-                <Typography variant="body1">{apiData.content}</Typography>
+                <Typography variant="body1" sx={{ height: '48px' }}>
+                    {apiData.content}
+                </Typography>
             </CardContent>
             <Divider
                 light
@@ -70,21 +72,19 @@ export const LandingPageApiList = () => {
     const staticAPIDataList = [
         {
             label: 'Accounts API',
-            content: 'This is Accounts API from APIHub by Broadcom.com.',
+            content: 'Get a list of your current accounts',
         },
         {
             label: 'Account Balances API',
-            content:
-                'This is Account Balances API from APIHub by Broadcom.com.',
+            content: 'Get your account balances',
         },
         {
             label: 'Account Transactions API',
-            content:
-                'This is Account Transactions API from APIHub by Broadcom.com.',
+            content: 'Get a list of your transactions for a specific account',
         },
         {
             label: 'Mortgage Rates API',
-            content: 'This is Mortgage Rates API from APIHub by Broadcom.com.',
+            content: 'Get a list of the current mortgage rates',
         },
     ];
     return (
