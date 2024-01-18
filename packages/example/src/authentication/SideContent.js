@@ -1,14 +1,19 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import { ContentLogo } from '../ui';
+// import { ContentLogo } from '../ui';
 
 export const SideContent = () => {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
-            <ContentLogo className={classes.logo} />
+            {/* <ContentLogo className={classes.logo} /> */}
+            <img
+                src="/besafebank-globe.png"
+                alt="besafebank globe logo"
+                className={classes.logo}
+            />
         </div>
     );
 };
@@ -26,7 +31,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     logo: {
-        height: '100%',
-        width: '100%',
+        width: '80%',
+        height: 'auto',
     },
 }));

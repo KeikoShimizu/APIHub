@@ -99,6 +99,10 @@ export const LoginForm = props => {
                         variant="outlined"
                         fullWidth
                         validate={required()}
+                        sx={{
+                            marginRight: '1em',
+                        }}
+                        // className={classes.namefield}
                     />
                     <PasswordInput
                         source="password"
@@ -106,12 +110,20 @@ export const LoginForm = props => {
                         variant="outlined"
                         fullWidth
                         validate={required()}
+                        className={classes.passwordfield}
                     />
                 </SimpleForm>
             )}
             {!localLoginsDisabled ? (
-                <Typography variant="body1">
-                    <Link component={RouterLink} to="/reset-password">
+                <Typography
+                    variant="body1"
+                    className={classes.forgetpasswordbox}
+                >
+                    <Link
+                        component={RouterLink}
+                        to="/reset-password"
+                        className={classes.forgetpassword}
+                    >
                         {translate('apihub.login.actions.forgot_password')}
                     </Link>
                 </Typography>
@@ -134,6 +146,18 @@ const useStyles = makeStyles(
             '& >:first-child': {
                 padding: 0,
             },
+        },
+        // namefield: {
+        //     backgroundColor: '#F9D9D2',
+        // },
+        // passwordfield: {
+        //     color: '#F9D9D2',
+        // },
+        forgetpasswordbox: {
+            margin: '10px 0',
+        },
+        forgetpassword: {
+            color: '#F15A24',
         },
     }),
     {

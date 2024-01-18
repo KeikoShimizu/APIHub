@@ -36,6 +36,7 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         flexDirection: 'column',
         overflow: 'auto',
+        alignItems: 'center',
     },
     container: {
         display: 'flex',

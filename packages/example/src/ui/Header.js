@@ -24,7 +24,9 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.getContrastText(theme.palette.background.default),
     },
     logo: {
-        height: '100%',
-        fill: 'currentColor',
+        // height: '100%',
+        // fill: 'currentColor',
+        width: '100%',
+        height: 'auto',
     },
 }));

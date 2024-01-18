@@ -20,15 +20,15 @@
         "cypress"
     ],
     "devDependencies": {
+        "babel-eslint": "^10.1.0",
         "concurrently": "~5.1.0",
         "eslint": "~7.11.0",
         "eslint-config-prettier": "~6.15.0",
+        "eslint-config-react-app": "^6.0.0",
         "eslint-plugin-prettier": "~3.1.4",
         "husky": "~4.2.3",
         "lint-staged": "~10.0.7",
-        "prettier": "~1.19.1",
-        "babel-eslint": "^10.1.0",
-        "eslint-config-react-app": "^6.0.0"
+        "prettier": "~1.19.1"
     },
     "resolutions": {
         "@testing-library/dom": "~6.11.0",
@@ -48,5 +48,11 @@
         "ua-parser-js": "0.7.35",
         "url-parse": "^1.5.9",
         "fast-json-patch": "3.1.1"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.3",
+        "@emotion/styled": "^11.11.0",
+        "@mui/icons-material": "^5.15.5",
+        "@mui/material": "^5.15.5"
     }
 }
