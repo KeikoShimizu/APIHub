@@ -67,7 +67,7 @@ const useStyles = makeStyles(
             backgroundColor: '#006837',
             width: '100%',
             '&:hover': {
-                backgroundColor: 'yellow', // ホバー時の色も指定することが一般的です
+                backgroundColor: '#1b5e20',
             },
         },
         circularProgress: {

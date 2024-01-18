@@ -99,10 +99,11 @@ export const LoginForm = props => {
                         variant="outlined"
                         fullWidth
                         validate={required()}
-                        sx={{
-                            marginRight: '1em',
-                        }}
-                        // className={classes.namefield}
+                        // sx={{
+                        //     borderColor: '#F15A24 !important', // ボーダーカラーをオレンジに変更
+                        //     backgroundColor: '#F9D9D2 !important', // バックグラウンドカラーをお好みの色に変更
+                        // }}
+                        className={classes.namefield}
                     />
                     <PasswordInput
                         source="password"
@@ -110,6 +111,10 @@ export const LoginForm = props => {
                         variant="outlined"
                         fullWidth
                         validate={required()}
+                        // sx={{
+                        //     borderColor: '#F15A24 !important', // ボーダーカラーをオレンジに変更
+                        //     backgroundColor: '#FFA500 !important', // バックグラウンドカラーをお好みの色に変更
+                        // }}
                         className={classes.passwordfield}
                     />
                 </SimpleForm>
@@ -147,12 +152,22 @@ const useStyles = makeStyles(
                 padding: 0,
             },
         },
-        // namefield: {
-        //     backgroundColor: '#F9D9D2',
-        // },
-        // passwordfield: {
-        //     color: '#F9D9D2',
-        // },
+        namefield: {
+            borderColor: 'orange',
+            '& div > input ': {
+                borderColor: '#F15A24 !important', // ボーダーカラーをオレンジに変更
+                backgroundColor: '#F9D9D2 !important', // バックグラウンドカラーをお好みの色に変更
+            },
+
+            // backgroundColor: '#F9D9D2',
+        },
+        passwordfield: {
+            borderColor: 'orange',
+            '& div > input ': {
+                borderColor: '#F15A24 !important', // ボーダーカラーをオレンジに変更
+                backgroundColor: '#F9D9D2 !important', // バックグラウンドカラーをお好みの色に変更
+            },
+        },
         forgetpasswordbox: {
             margin: '10px 0',
         },
