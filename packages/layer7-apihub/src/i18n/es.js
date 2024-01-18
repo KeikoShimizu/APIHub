@@ -689,12 +689,12 @@ const apiHubMessages = {
             },
         },
     },
-    // Landingpage / Here is the Opject for language selection.
+    // Landingpage / Here is the Object for language selection.
     landingpage: {
         header: {
             navigation: {
                 New_Register_Now: 'Nuovo? Registrati ora',
-                explore_apis: 'Explora el catálogo de API',
+                explore_apis: 'Explorar las API',
                 support: 'Supporto',
             },
             button: {
@@ -719,7 +719,7 @@ const apiHubMessages = {
         },
         footer: {
             navigation: {
-                explore_apis: 'Explora el catálogo de API',
+                explore_apis: 'Explorar las API',
                 contact: 'Contattaci',
                 faq: 'Domande frequenti',
             },
