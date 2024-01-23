@@ -540,6 +540,9 @@ const apiHubMessages = {
             confirm_delete_document_with_children:
                 'You are about to delete this document and its child documents. Are you sure?',
         },
+        products: {
+            name: 'Products |||| Products',
+        },
         registrations: {
             title: 'Create a New Account',
             fields: {

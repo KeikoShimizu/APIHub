@@ -60,6 +60,7 @@ const App = () => {
             // ==> LandingPage / * Add new page router here as customRoutes * <==
             customRoutes={[
                 <Route path="/landingpage" component={LandingPage} noLayout />, //noLayout (Set "noLayout" if you need blank page.)
+                <Route path="/products" component={LandingPage} />,
                 <Route path="/test" component={TestPage} />,
             ]}
         />

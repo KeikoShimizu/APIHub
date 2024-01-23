@@ -5,7 +5,13 @@ import classnames from 'classnames';
 import { useTranslate } from 'ra-core';
 import { makeStyles, useMediaQuery } from '@material-ui/core';
 
-import { IconHome, IconApi, IconApps, IconWiki } from './ui/icons';
+import {
+    IconHome,
+    IconApi,
+    IconApps,
+    IconWiki,
+    IconProducts,
+} from './ui/icons';
 
 /**
  * The ApiHub Menu used in the ApiHub Sidebar.
@@ -70,6 +76,17 @@ export const ApiHubMenu = props => {
                 sidebarIsOpen={open}
             />
             <MenuItemLink
+                key="products"
+                to="/products"
+                primaryText={translate(`resources.products.name`, {
+                    smart_count: 2,
+                })}
+                leftIcon={<IconProducts />}
+                onClick={onMenuClick}
+                dense={dense}
+                sidebarIsOpen={open}
+            />
+            <MenuItemLink
                 key="documents"
                 to="/wiki"
                 primaryText={translate(`resources.documents.name`, {
@@ -80,6 +97,7 @@ export const ApiHubMenu = props => {
                 dense={dense}
                 sidebarIsOpen={open}
             />
+
             {isXSmall && logout}
         </div>
     );
