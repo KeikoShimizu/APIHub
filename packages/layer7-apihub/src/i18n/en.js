@@ -673,11 +673,11 @@ const apiHubMessages = {
         },
         main: {
             hero: {
-                header: 'BSB is the best at keeping your transactions safe',
+                header: 'BeSafe is the best at keeping your transactions safe',
             },
             api_collection: {
                 header: {
-                    title: 'Start developing with BSB',
+                    title: 'Start developing with BeSafe',
                     content:
                         "Start developing your APIs with BeSafe Bank's leading edge API Management Program that enables you to securely access banking data and wrap it with your corporate brand.",
                 },
