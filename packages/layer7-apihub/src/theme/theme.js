@@ -10,7 +10,7 @@ const palette = createPalette(
     merge({}, defaultTheme.palette, {
         secondary: {
             light: '#6ec6ff',
-            main: '#43425d',
+            main: '#F9D9D2',
             dark: '#0069c0',
             contrastText: defaultMuiTheme.palette.common.white,
         },
@@ -34,13 +34,13 @@ export const theme = createMuiTheme(
                     paddingBottom: defaultMuiTheme.spacing(2),
                 },
                 active: {
-                    borderLeftColor: blue[800],
+                    borderLeftColor: '#F15A24',
                     borderLeftWidth: defaultMuiTheme.spacing(0.5),
                     borderLeftStyle: 'solid',
-                    backgroundColor: palette.action.selected,
+                    backgroundColor: '#F9AF98',
                     color: palette.common.white,
                     '& svg': {
-                        color: '#a3a0fb',
+                        color: '#F15A24',
                     },
                 },
                 icon: {
