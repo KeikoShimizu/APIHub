@@ -53,6 +53,7 @@ export const theme = createMuiTheme(
                     marginTop: '1.5em',
                     height: 'calc(100% - 1.5em)',
                     [defaultMuiTheme.breakpoints.up('xs')]: {
+                        backgroundColor: palette.secondary.main,
                         marginTop: '0',
                         paddingTop: '1.5em',
                     },

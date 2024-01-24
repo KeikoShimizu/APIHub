@@ -489,7 +489,7 @@ const apiHubMessages = {
             },
         },
         documents: {
-            name: 'Wiki |||| Wiki',
+            name: 'BeSafe News |||| BeSafe News',
             fields: {
                 title: 'Title',
                 navtitle: 'URI',

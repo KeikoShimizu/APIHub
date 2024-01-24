@@ -40,7 +40,7 @@ const App = () => {
                 customRoutes={[
                     <Route path="/dashboard" exact component={HomePage} />,
                     <Route path="/" exact component={LandingPage} noLayout />,
-                    <Route path="/wiki" component={documents.list} />,
+                    <Route path="/besafenews" component={documents.list} />,
                 ]}
                 dataProvider={dataProvider(APIHUB_URL, TENANT_NAME)}
             >
