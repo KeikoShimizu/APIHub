@@ -128,7 +128,7 @@ export const ApiHubAdmin = ({
                     // is to pass the customRoutes from the props before.
                     ...customRoutes,
                     // The Wiki Page displays a list of documents in a non standard way.
-                    <Route path="/wiki" component={documents.list} />,
+                    <Route path="/besafenews" component={documents.list} />,
                     <Route
                         path="/reset-password*"
                         component={resetPasswordPage}
