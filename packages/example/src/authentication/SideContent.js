@@ -1,14 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-// import { ContentLogo } from '../ui';
-
 export const SideContent = () => {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
-            {/* <ContentLogo className={classes.logo} /> */}
             <img
                 src="/besafebank-globe.png"
                 alt="besafebank globe logo"

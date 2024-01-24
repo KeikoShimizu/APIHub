@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Notification } from 'react-admin';
 import { Header, Footer } from '../ui';
-import { SideContent } from './SideContent';
 
 // This component exists for theming only. Indeed, we must call the useStyles hook AFTER
 // the ThemeProvider has been initialized with the specified theme
@@ -14,9 +13,6 @@ export const ThemedAuthenticationLayout = ({ children }) => {
             <Header />
             <div className={classes.container}>
                 <div className={classes.columns}>{children}</div>
-                <div className={classes.columns}>
-                    <SideContent />
-                </div>
             </div>
             <Footer />
             <Notification />
@@ -52,7 +48,6 @@ const useStyles = makeStyles(theme => ({
         },
         '&:first-child': {
             minWidth: '250px',
-            maxWidth: '30%',
             [theme.breakpoints.down('sm')]: {
                 maxWidth: '100%',
                 width: '100%',

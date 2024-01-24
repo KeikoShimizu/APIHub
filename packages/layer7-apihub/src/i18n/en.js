@@ -40,7 +40,7 @@ const apiHubMessages = {
                 sign_in: 'Sign in',
                 sign_in_with: 'Sign in with',
                 sign_up_title: 'New to BeSafe Bank?',
-                sign_up: 'Create an BeSafe Bank Account',
+                sign_up: 'Create a BeSafe bank Account',
                 forgot_password: 'Forgot password?',
             },
             notifications: {
@@ -489,7 +489,7 @@ const apiHubMessages = {
             },
         },
         documents: {
-            name: 'Wiki |||| Wiki',
+            name: 'BeSafe News |||| BeSafe News',
             fields: {
                 title: 'Title',
                 navtitle: 'URI',
@@ -539,6 +539,9 @@ const apiHubMessages = {
                 'You are about to delete this document. Are you sure?',
             confirm_delete_document_with_children:
                 'You are about to delete this document and its child documents. Are you sure?',
+        },
+        products: {
+            name: 'Products |||| Products',
         },
         registrations: {
             title: 'Create a New Account',
