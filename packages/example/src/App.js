@@ -14,6 +14,7 @@ import { Layout, HomePage } from './layout';
 import { themeReducer } from './theme';
 import { i18nProvider } from './i18n/i18nProvider';
 import { LandingPage } from '../src/landingPage';
+import { Products } from './ui/Products';
 import { TestPage } from './TestPage';
 
 const App = () => {
@@ -58,9 +59,10 @@ const App = () => {
             i18nProvider={i18nProvider(defaultLocaleFromPreferences)}
             initialState={initialState}
             // ==> LandingPage / * Add new page router here as customRoutes * <==
+            // ==> Productspage / * Add new page router here as customRoutes using default Layout component* <==
             customRoutes={[
                 <Route path="/landingpage" component={LandingPage} noLayout />, //noLayout (Set "noLayout" if you need blank page.)
-                <Route path="/products" component={LandingPage} />,
+                <Route path="/products" component={Products} />,
                 <Route path="/test" component={TestPage} />,
             ]}
         />
