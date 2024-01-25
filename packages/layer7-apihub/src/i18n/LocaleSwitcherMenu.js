@@ -22,7 +22,7 @@ export const LocaleSwitcherMenu = props => {
     };
 
     //Color set for landing page
-    const textColour = page === 'landingpage' ? 'black' : 'none';
+    const textColour = page === 'landingpage' ? 'black' : '#006837';
 
     return (
         <>

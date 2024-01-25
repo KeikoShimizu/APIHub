@@ -1,202 +1,137 @@
-import React, { useState, useEffect, forwardRef } from 'react';
+import React from 'react';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
+
+import { makeStyles, useMediaQuery } from '@material-ui/core';
 import { useTranslate } from 'ra-core';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Fade from '@material-ui/core/Fade';
-import LinearProgress from '@material-ui/core/LinearProgress';
-import InputLabel from '@material-ui/core/InputLabel';
-import Slide from '@material-ui/core/Slide';
-import { makeStyles } from '@material-ui/core/styles';
-import SaveIcon from '@material-ui/icons/Save';
 
-import { ENTITY_TYPE_HOME } from '../dataProvider/documents';
-import { HomePageCreateButton, HomePageEditButton } from './HomePageButton';
-import {
-    MarkdownEditor,
-    markdownRenderer as defaultMarkdownRenderer,
-    MarkdownView,
-} from '../ui';
-import { useUserContext } from '../userContexts';
-import { useMarkdownContent } from '../documentation';
+export const HomePageContent = () => {
+    const classes = useStyles();
 
-/**
- * This component is responsible for fetching and displaying an home page content.
- * It also provide mechanisms for portal administrators to update it.
- *
- * The HomePageContent can be used as the default home page if there is only one content to display.
- *
- * @example <caption>Simple usage</caption>
- * <HomePageContent />
- *
- * const MyApp = props => <Admin dashboard={HomePageContent} {...props} />
- *
- */
-export const HomePageContent = props => {
-    const { navtitle = 'home1', entityUuid = 'home1', ...rest } = props;
+    const buttons = [
+        { label: 'Explore APIs', router: '/apis' },
+        { label: 'Explore Applications', router: '/applications' },
+    ];
 
-    const [{ data, loading }, handleUpdate] = useMarkdownContent({
-        entityType: ENTITY_TYPE_HOME,
-        entityUuid,
-        navtitle,
-    });
-    const translate = useTranslate();
-    const classes = useStyles(rest);
-
-    const [userContext] = useUserContext();
-    const canEdit = userContext?.userDetails?.portalAdmin || false;
-
-    const [mode, setMode] = useState('view');
-    const handleToggleEditionMode = () => setMode('edition');
-    const handleToggleViewMode = () => setMode('view');
-
-    useEffect(() => {
-        setMode('view');
-    }, [data]);
-
-    if (loading) {
-        return (
-            <Fade
-                in
-                style={{
-                    transitionDelay: '300ms',
-                }}
-                unmountOnExit
-            >
-                <LinearProgress />
-            </Fade>
-        );
-    }
+    const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
 
     return (
-        <div className={classes.root}>
-            <MarkdownView
-                className={classes.markdown}
-                value={
-                    !data
-                        ? translate('apihub.homepage.placeholder_empty_content')
-                        : data.markdown
-                }
-                {...rest}
-            />
-            {canEdit ? (
+        <Stack spacing={7} alignItems="center">
+            {isSmall ? (
                 <>
-                    {data ? (
-                        <HomePageEditButton onClick={handleToggleEditionMode} />
-                    ) : (
-                        <HomePageCreateButton
-                            onClick={handleToggleEditionMode}
+                    <Box className={classes.herocontainer}>
+                        <img
+                            src="/besafebank-home-hero.png"
+                            alt="bank"
+                            className={classes.image}
                         />
-                    )}
-                    <HomePageContentEditor
-                        initialValue={data ? data.markdown : undefined}
-                        navtitle={navtitle}
-                        onCancel={handleToggleViewMode}
-                        onSave={handleUpdate}
-                        open={mode === 'edition'}
-                    />
+                        <Box className={classes.titlebox}>
+                            <Typography variant="h2">
+                                Start Developing with BeSafe!
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Typography variant="body1">
+                        Start developing your APIs with BeSafe Bank’s leading
+                        edge API Management Program, that enables you to
+                        securely access banking data and wrap it with your
+                        corporate brand.
+                    </Typography>
                 </>
-            ) : null}
-        </div>
+            ) : (
+                <Box className={classes.herocontainer}>
+                    <img
+                        src="/besafebank-home-hero.png"
+                        alt="bank"
+                        className={classes.image}
+                    />
+                    <Box className={classes.titlebox}>
+                        <Typography variant="h2">
+                            Start Developing with BeSafe!
+                        </Typography>
+                        <Typography variant="body1">
+                            Start developing your APIs with BeSafe Bank’s
+                            leading edge API Management Program, that enables
+                            you to securely access banking data and wrap it with
+                            your corporate brand.
+                        </Typography>
+                    </Box>
+                </Box>
+            )}
+            <Box className={classes.buttoncontainer}>
+                {buttons.map((button, index) => (
+                    <Button
+                        key={index}
+                        component={Link}
+                        to={button.router}
+                        variant="contained"
+                        color="success"
+                        size="medium"
+                        className={classes.button}
+                    >
+                        {button.label}
+                    </Button>
+                ))}
+            </Box>
+        </Stack>
     );
 };
-
-const HomePageContentEditor = ({
-    initialValue,
-    markdownRenderer = defaultMarkdownRenderer,
-    onCancel,
-    onSave,
-    open,
-    navtitle,
-}) => {
-    const classes = useHomePageContentEditorStyles();
-    const [value, setValue] = useState(initialValue);
-    const translate = useTranslate();
-
-    const handleSave = () => {
-        onSave(value);
-    };
-
-    const handleCancel = () => {
-        setValue(initialValue);
-        onCancel();
-    };
-
-    useEffect(() => {
-        // Be sure the value is updated when the initialValue changed
-        setValue(initialValue);
-    }, [initialValue]);
-
-    return (
-        <Dialog
-            open={open}
-            fullScreen
-            onClose={handleCancel}
-            TransitionComponent={Transition}
-        >
-            <DialogTitle>{navtitle}</DialogTitle>
-            <DialogContent>
-                <InputLabel shrink htmlFor="textarea">
-                    {translate('resources.documents.fields.markdown')}
-                </InputLabel>
-                <MarkdownEditor
-                    className={classes.editor}
-                    value={value}
-                    onChange={setValue}
-                    markdownRenderer={markdownRenderer}
-                />
-            </DialogContent>
-            <DialogActions className={classes.actions}>
-                <Button
-                    color="primary"
-                    variant="outlined"
-                    onClick={handleCancel}
-                >
-                    {translate('resources.documents.actions.cancel')}
-                </Button>
-                <Button
-                    color="primary"
-                    variant="contained"
-                    onClick={handleSave}
-                    startIcon={<SaveIcon />}
-                >
-                    {translate('resources.documents.actions.save')}
-                </Button>
-            </DialogActions>
-        </Dialog>
-    );
-};
-
-const Transition = forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
 
 const useStyles = makeStyles(
     theme => ({
-        root: {
+        herocontainer: {
             position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
         },
-        markdown: {
-            overflowWrap: 'anywhere',
+        image: {
+            width: '100%',
+            height: 'auto',
+            objectFit: 'cover',
+            objectPosition: 'center',
+        },
+        titlebox: {
+            position: 'absolute',
+            bottom: 10,
+            left: 0,
+            color: 'white',
+            [theme.breakpoints.up('md')]: {
+                margin: '40px',
+            },
+            '& > h2': {
+                fontWeight: 700,
+                [theme.breakpoints.up('md')]: {
+                    fontSize: '2.5rem',
+                },
+            },
+            '& > p:nth-child(2)': {
+                width: '90%',
+                color: 'white',
+                marginTop: '30px',
+                fontWeight: 700,
+                [theme.breakpoints.up('md')]: {
+                    fontSize: '24px',
+                },
+            },
+        },
+        buttoncontainer: {
+            display: 'flex',
+            width: '100%',
+            gap: '20px',
+            justifyContent: 'center',
+        },
+        button: {
+            fontSize: '12px',
+            maxWidth: '240px',
+            width: '100%',
+            textTransform: 'none',
+            textAlign: 'center',
         },
     }),
     {
         name: 'Layer7HomePageContent',
-    }
-);
-
-const useHomePageContentEditorStyles = makeStyles(
-    theme => ({
-        editor: {
-            height: `calc(100% - ${theme.spacing(2)}px)`,
-        },
-        actions: {
-            margin: theme.spacing(2),
-        },
-    }),
-    {
-        name: 'Layer7HomePageContentEditor',
     }
 );

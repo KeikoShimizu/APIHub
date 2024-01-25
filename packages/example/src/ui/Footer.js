@@ -20,9 +20,10 @@ export const Footer = () => {
 
 const useStyles = makeStyles(theme => ({
     root: {
-        padding: theme.spacing(4),
+        paddingTop: theme.spacing(4),
     },
     copyright: {
         fontSize: '0.75rem',
+        textAlign: 'center',
     },
 }));

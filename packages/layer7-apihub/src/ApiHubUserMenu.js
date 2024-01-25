@@ -94,11 +94,12 @@ export const ApiHubUserMenu = props => {
                     aria-label={label && translate(label, { _: label })}
                     aria-owns={open ? 'menu-appbar' : null}
                     aria-haspopup
-                    color="inherit"
+                    // color="inherit"
                     onClick={handleMenu}
                     startIcon={icon}
                     endIcon={<ArrowDropDownIcon />}
                     key={userName}
+                    className={classes.button}
                 >
                     {userName}
                 </Button>
@@ -159,6 +160,9 @@ ApiHubUserMenu.defaultProps = {
 
 const useStyles = makeStyles(
     theme => ({
+        button: {
+            color: '#006837',
+        },
         menuItem: {
             color: theme.palette.text.secondary,
             marginBottom: theme.spacing(),
