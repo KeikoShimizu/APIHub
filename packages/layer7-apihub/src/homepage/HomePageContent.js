@@ -19,7 +19,7 @@ export const HomePageContent = () => {
     const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
 
     return (
-        <Stack spacing={7} alignItems="center">
+        <Stack spacing={7} alignItems="center" className={classes.root}>
             {isSmall ? (
                 <>
                     <Box className={classes.herocontainer}>
@@ -82,11 +82,15 @@ export const HomePageContent = () => {
 
 const useStyles = makeStyles(
     theme => ({
+        root: {
+            paddingTop: '20px',
+        },
         herocontainer: {
             position: 'relative',
             display: 'flex',
             justifyContent: 'center',
         },
+
         image: {
             width: '100%',
             height: 'auto',
@@ -94,26 +98,45 @@ const useStyles = makeStyles(
             objectPosition: 'center',
         },
         titlebox: {
+            // position: 'absolute',
+            // bottom: 10,
+            // left: 0,
+            // color: 'white',
             position: 'absolute',
-            bottom: 10,
+            top: 0,
             left: 0,
+            right: 0,
+            bottom: 0,
             color: 'white',
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             [theme.breakpoints.up('md')]: {
+                top: 'unset',
+                bottom: 10,
+                left: 0,
                 margin: '40px',
+                display: 'block',
             },
             '& > h2': {
                 fontWeight: 700,
+                fontSize: '2rem',
+                textAlign: 'center',
                 [theme.breakpoints.up('md')]: {
                     fontSize: '2.5rem',
+                    textAlign: 'left',
                 },
             },
             '& > p:nth-child(2)': {
                 width: '90%',
                 color: 'white',
-                marginTop: '30px',
+                // marginTop: '10px',
+                marginTop: '20px',
                 fontWeight: 700,
                 [theme.breakpoints.up('md')]: {
                     fontSize: '24px',
+                    marginTop: '30px',
                 },
             },
         },
