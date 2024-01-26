@@ -242,12 +242,12 @@ const useStyles = makeStyles(
                 boxShadow: 'inherit',
             },
             '&:hover': {
-                backgroundColor: theme.palette.grey[300],
+                backgroundColor: theme.palette.grey[400],
             },
             '&$disabled': {
                 height: 38,
                 width: '100%',
-                backgroundColor: theme.palette.success.dark,
+                backgroundColor: '#006837',
                 color: theme.palette.common.white,
                 borderRadius: 2,
                 marginTop: -2,
@@ -258,10 +258,12 @@ const useStyles = makeStyles(
             height: 34,
             borderRadius: 2,
             width: '200%',
+            backgroundColor: theme.palette.grey[400],
         },
         track: {
             height: 34,
             borderRadius: 2,
+            backgroundColor: theme.palette.grey[500],
         },
         disabled: {},
         colorTextSecondary: {
