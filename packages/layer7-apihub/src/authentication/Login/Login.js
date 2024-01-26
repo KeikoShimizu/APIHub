@@ -65,7 +65,8 @@ const useStyles = makeStyles(
     theme => ({
         title: {
             fontSize: theme.typography.fontSize * 2,
-            marginBottom: theme.spacing(6),
+            marginBottom: theme.spacing(2),
+            textAlign: 'center',
         },
     }),
     {

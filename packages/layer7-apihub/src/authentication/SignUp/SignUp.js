@@ -7,6 +7,7 @@ import { CRUD_CREATE, useCreate, useTranslate } from 'ra-core';
 import { SignUpForm } from './SignUpForm';
 import { AuthenticationLayout } from '../AuthenticationLayout';
 import { useLayer7Notify } from '../../useLayer7Notify';
+import { Box } from '@material-ui/core';
 
 export const SignUp = props => {
     const translate = useTranslate();
@@ -25,7 +26,7 @@ export const SignUp = props => {
     };
 
     return (
-        <>
+        <Box className={classes.root}>
             <Typography
                 variant="h2"
                 color="textPrimary"
@@ -42,7 +43,7 @@ export const SignUp = props => {
                     {...props}
                 />
             )}
-        </>
+        </Box>
     );
 };
 
@@ -144,8 +145,14 @@ export const SignUpConfirmation = () => {
 };
 
 const useStyles = makeStyles(theme => ({
+    root: {
+        [theme.breakpoints.up('md')]: {
+            width: '600px',
+        },
+    },
     title: {
         fontSize: theme.typography.fontSize * 2,
         marginBottom: theme.spacing(6),
+        textAlign: 'center',
     },
 }));

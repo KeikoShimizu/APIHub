@@ -1,9 +1,11 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
+import { useTranslate } from 'react-admin';
 
 export const Footer = () => {
     const classes = useStyles();
+    const translate = useTranslate();
 
     return (
         <div className={classes.root}>
@@ -12,17 +14,15 @@ export const Footer = () => {
                 variant="body2"
                 className={classes.copyright}
             >
-                Copyright © 2020 Broadcom. All Rights Reserved
+                ®︎2024 BesafeBank {translate('landingpage.footer.copyright')}
             </Typography>
         </div>
     );
 };
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        padding: theme.spacing(4),
-    },
     copyright: {
         fontSize: '0.75rem',
+        textAlign: 'center',
     },
 }));

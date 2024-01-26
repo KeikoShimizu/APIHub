@@ -87,48 +87,6 @@ export const AuthSchemeList = props => {
                         : null}
                 </Alert>
             </Snackbar>
-            <Divider variant="middle" />
-            { credsReqd &&
-            <Typography className={classes.divider} variant="body1">
-                or
-            </Typography> }
-            <Typography variant="body1">
-                {translate('apihub.login.actions.sign_in_with')}
-            </Typography>
-            <List>
-                {authSchemes.map((scheme, i) => (
-                    <ListItem key={scheme.name} disableGutters>
-                        <Tooltip
-                            key={i}
-                            title={scheme.description}
-                            placement="right-start"
-                        >
-                            <Button
-                                variant="outlined"
-                                startIcon={
-                                    <StartIcon
-                                        scheme={scheme}
-                                        selectedScheme={selectedScheme}
-                                    />
-                                }
-                                className={classes.listButton}
-                                onClick={() => onSelectScheme(scheme)}
-                            >
-                                <span className={classes.listButtonLabelName}>
-                                    {scheme.name}
-                                    <span
-                                        className={
-                                            classes.listButtonLabelDescription
-                                        }
-                                    >
-                                        {scheme.description}
-                                    </span>
-                                </span>
-                            </Button>
-                        </Tooltip>
-                    </ListItem>
-                ))}
-            </List>
         </div>
     );
 };
@@ -151,14 +109,6 @@ const useStyles = makeStyles(
         listButton: {
             width: '100%',
             justifyContent: 'start',
-        },
-        divider: {
-            marginTop: '-13px',
-            marginBottom: theme.spacing(2),
-            margin: '0 auto',
-            width: '20px',
-            textAlign: 'center',
-            backgroundColor: theme.palette.background.default,
         },
     }),
     {
