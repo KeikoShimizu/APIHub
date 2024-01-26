@@ -27,7 +27,6 @@ export const LoginToolbar = props => {
                     <ValidationError error={error} />
                 </Typography>
             ) : null}
-            {/* <Toolbar className={classes.toolbar} {...rest}> */}
             <SaveButton
                 icon={
                     loading ? (
@@ -47,22 +46,12 @@ export const LoginToolbar = props => {
                 className={classes.signinButton}
                 {...rest}
             />
-            {/* </Toolbar> */}
         </>
     );
 };
 
 const useStyles = makeStyles(
     theme => ({
-        // toolbar: {
-        //     display: 'flex',
-        //     flexDirection: 'column',
-        //     width: '100%',
-        //     alignItems: 'stretch',
-        //     flexBasis: '100%',
-        //     backgroundColor: 'transparent',
-        //     // padding: 0,
-        // },
         signinButton: {
             backgroundColor: '#006837',
             width: '100%',

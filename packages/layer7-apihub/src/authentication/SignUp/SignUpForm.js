@@ -7,7 +7,8 @@ import {
     TextInput,
     useTranslate,
 } from 'react-admin';
-import { makeStyles, Link, Typography } from '@material-ui/core';
+import { makeStyles, Link, Typography, useMediaQuery } from '@material-ui/core';
+import Stack from '@mui/material/Stack';
 import isEmpty from 'lodash/isEmpty';
 import { SignUpToolbar } from './SignUpToolbar';
 import { ConfirmSlider } from '../../ui';
@@ -60,6 +61,10 @@ export const SignUpForm = props => {
             };
         }
     };
+    const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
+    const gridDirection = isSmall ? 'column' : 'row';
+
+    console.log('Yes or No', isSmall);
 
     return (
         <>
@@ -70,37 +75,41 @@ export const SignUpForm = props => {
                 redirect={false}
                 validate={validate}
             >
-                <TextInput
-                    source="Email"
-                    type="email"
-                    label="resources.registrations.fields.email"
-                    variant="outlined"
-                    fullWidth
-                    validate={ValidateEmail}
-                />
-                <TextInput
-                    source="EmailConfirmation"
-                    type="email"
-                    label="resources.registrations.fields.email_confirmation"
-                    variant="outlined"
-                    fullWidth
-                    validate={ValidateEmailConfirmation}
-                />
-                <TextInput
-                    source="OrganizationName"
-                    type="text"
-                    label="resources.registrations.fields.organization"
-                    variant="outlined"
-                    fullWidth
-                />
-                <TextInput
-                    source="OrganizationDescription"
-                    type="text"
-                    label="resources.registrations.fields.organization_description"
-                    variant="outlined"
-                    fullWidth
-                    multiline
-                />
+                <Stack direction={gridDirection} className={classes.inputBox}>
+                    <TextInput
+                        source="Email"
+                        type="email"
+                        label="resources.registrations.fields.email"
+                        variant="outlined"
+                        fullWidth
+                        validate={ValidateEmail}
+                    />
+                    <TextInput
+                        source="EmailConfirmation"
+                        type="email"
+                        label="resources.registrations.fields.email_confirmation"
+                        variant="outlined"
+                        fullWidth
+                        validate={ValidateEmailConfirmation}
+                    />
+                </Stack>
+                <Stack direction={gridDirection} className={classes.inputBox}>
+                    <TextInput
+                        source="OrganizationName"
+                        type="text"
+                        label="resources.registrations.fields.organization"
+                        variant="outlined"
+                        fullWidth
+                    />
+                    <TextInput
+                        source="OrganizationDescription"
+                        type="text"
+                        label="resources.registrations.fields.organization_description"
+                        variant="outlined"
+                        fullWidth
+                        multiline
+                    />
+                </Stack>
                 <>
                     <ConfirmSliderHeader
                         classes={classes}
@@ -116,7 +125,11 @@ export const SignUpForm = props => {
                 </>
             </SimpleForm>
 
-            <Typography variant="body1" align="center">
+            <Typography
+                variant="body1"
+                align="center"
+                className={classes.movelogin}
+            >
                 <Link component={RouterLink} to="/login">
                     {translate('resources.registrations.actions.login')}
                 </Link>
@@ -192,6 +205,18 @@ const useStyles = makeStyles(
         form: {
             '& >:first-child': {
                 padding: 0,
+            },
+        },
+        inputBox: {
+            width: '100%',
+            [theme.breakpoints.up('md')]: {
+                gap: '20px',
+            },
+        },
+        movelogin: {
+            marginTop: '30px',
+            '& > a': {
+                color: '#F15A24',
             },
         },
         title: {

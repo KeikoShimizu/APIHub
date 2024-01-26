@@ -1,6 +1,6 @@
 import React from 'react';
-import { SaveButton, Toolbar } from 'react-admin';
-import { makeStyles, Typography} from '@material-ui/core';
+import { SaveButton } from 'react-admin';
+import { makeStyles, Typography } from '@material-ui/core';
 import { ValidationError } from 'ra-core';
 import get from 'lodash/get';
 
@@ -17,13 +17,11 @@ export const ResetPasswordToolbar = props => {
 
     const { button } = props;
     const { error } = props;
-    const color = get(button, 'color', 'primary');
     const variant = get(button, 'variant', 'outlined');
-    const size = get(button, 'size', 'small');
 
     return (
         <>
-          {error ? (
+            {error ? (
                 <Typography
                     variant="body1"
                     color="error"
@@ -32,32 +30,27 @@ export const ResetPasswordToolbar = props => {
                     <ValidationError error={error} />
                 </Typography>
             ) : null}
-            <Toolbar className={classes.toolbar} {...props}>
             <SaveButton
-                className={classes.submit}
                 icon={<span />}
                 label="apihub.reset_password.actions.submit"
-                color={color}
                 variant={variant}
-                size={size}
+                className={classes.submitButton}
+                {...props}
             />
-        </Toolbar>
         </>
     );
 };
 
 const useStyles = makeStyles(
     theme => ({
-        toolbar: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'stretch',
-            flexBasis: '100%',
-            backgroundColor: 'transparent',
-            padding: 0,
-            marginTop: theme.spacing(2),
+        submitButton: {
+            backgroundColor: '#006837',
+            width: '100%',
+            marginTop: '20px',
+            '&:hover': {
+                backgroundColor: '#1b5e20',
+            },
         },
-        submit: {},
     }),
     {
         name: 'Layer7ResetPasswordToolbar',
