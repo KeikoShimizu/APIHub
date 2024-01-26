@@ -17,6 +17,7 @@ import {
 } from 'layer7-apihub';
 import { BrandLogo } from '../ui';
 import { changeTheme, useTheme } from '../theme';
+import { Stack } from '@mui/material';
 
 export const AppBar = ({
     children,
@@ -45,24 +46,28 @@ export const AppBar = ({
                     variant="regular"
                     className={classes.toolbar}
                 >
-                    {cloneElement(sidebarButton, { open })}
-                    <div className={classes.header}>
-                        <BrandLogo
-                            className={classes.logo}
-                            fill="#fff"
-                            img={logo}
+                    <Stack direction="row">
+                        {cloneElement(sidebarButton, { open })}
+                        <div className={classes.header}>
+                            <BrandLogo
+                                className={classes.logo}
+                                fill="#fff"
+                                img={logo}
+                            />
+                        </div>
+                    </Stack>
+                    <Stack direction="row" className={classes.functionbox}>
+                        <LoadingIndicator sx={{ color: '#006837' }} />
+                        {!global.APIHUB_CONFIG.USE_BRANDING_THEME ? (
+                            <ThemeModeButton />
+                        ) : null}
+                        {cloneElement(languagesMenu)}
+                        <Divider
+                            className={classes.divider}
+                            orientation="vertical"
                         />
-                    </div>
-                    <LoadingIndicator />
-                    {!global.APIHUB_CONFIG.USE_BRANDING_THEME ? (
-                        <ThemeModeButton />
-                    ) : null}
-                    {cloneElement(languagesMenu)}
-                    <Divider
-                        className={classes.divider}
-                        orientation="vertical"
-                    />
-                    {cloneElement(userMenu, { logout })}
+                        {cloneElement(userMenu, { logout })}
+                    </Stack>
                 </Toolbar>
             </MuiAppBar>
         </HideOnScroll>
@@ -80,27 +85,32 @@ const useStyles = makeStyles(
         toolbar: {
             paddingRight: 24,
             backgroundColor: theme.palette.customHeader?.main,
+            justifyContent: 'space-between',
+            alignItems: 'center',
             color: theme.palette.getContrastText(
                 theme.palette.customHeader?.main || theme.palette.common.white
             ),
         },
         header: {
-            flex: 1,
+            // flex: 1,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'flex-start',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
             overflow: 'hidden',
-            minWidth: '156px',
+            // minWidth: '156px',
+        },
+        functionbox: {
+            alignItems: 'center',
         },
         divider: {
             alignSelf: 'stretch',
             backgroundColor: theme.palette.primary.contrastText,
             height: 'auto',
             marginBottom: theme.spacing(2),
-            marginLeft: theme.spacing(4),
-            marginRight: theme.spacing(4),
+            marginLeft: theme.spacing(2),
+            marginRight: theme.spacing(2),
             marginTop: theme.spacing(2),
         },
         logo: {
