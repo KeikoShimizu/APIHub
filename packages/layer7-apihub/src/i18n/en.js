@@ -31,7 +31,7 @@ const apiHubMessages = {
     },
     apihub: {
         login: {
-            title: 'Sign In To API Hub',
+            title: 'Sign In To BeSafe Bank',
             fields: {
                 username: 'Username',
                 password: 'Password',
@@ -39,8 +39,8 @@ const apiHubMessages = {
             actions: {
                 sign_in: 'Sign in',
                 sign_in_with: 'Sign in with',
-                sign_up_title: 'New to API Hub?',
-                sign_up: 'Create an API Hub Account',
+                sign_up_title: 'New to BeSafe Bank?',
+                sign_up: 'Create a BeSafe bank Account',
                 forgot_password: 'Forgot password?',
             },
             notifications: {

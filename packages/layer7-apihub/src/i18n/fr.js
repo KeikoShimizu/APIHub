@@ -681,7 +681,7 @@ const apiHubMessages = {
             },
         },
     },
-    // Landingpage / Here is the Opject for language selection.
+    // Landingpage / Here is the Object for language selection.
     landingpage: {
         header: {
             navigation: {

@@ -21,6 +21,7 @@ export const SignUpLink = props => {
                 to="/signup"
                 variant="outlined"
                 color="primary"
+                className={classes.signupbutton}
             >
                 {translate('apihub.login.actions.sign_up')}
             </Button>
@@ -32,8 +33,12 @@ const useStyles = makeStyles(
     theme => ({
         title: {
             fontSize: theme.typography.fontSize * 2,
-            marginTop: theme.spacing(6),
+            textAlign: 'center',
             marginBottom: theme.spacing(2),
+        },
+        signupbutton: {
+            color: '#006837',
+            borderColor: '#006837',
         },
     }),
     {

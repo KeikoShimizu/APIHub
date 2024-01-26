@@ -12,9 +12,9 @@ export const LoginToolbar = props => {
     const classes = useStyles(rest);
 
     const { button } = props;
-    const color = get(button, 'color', 'primary');
+    // const color = get(button, 'color', 'primary');
     const variant = get(button, 'variant', 'outlined');
-    const size = get(button, 'size', 'small');
+    // const size = get(button, 'size', 'small');
 
     return (
         <>
@@ -27,38 +27,37 @@ export const LoginToolbar = props => {
                     <ValidationError error={error} />
                 </Typography>
             ) : null}
-            <Toolbar className={classes.toolbar} {...rest}>
-                <SaveButton
-                    icon={
-                        loading ? (
-                            <CircularProgress
-                                className={classes.circularProgress}
-                                size={15}
-                            />
-                        ) : (
-                            <span />
-                        )
-                    }
-                    label="apihub.login.actions.sign_in"
-                    disabled={loading}
-                    color={color}
-                    variant={variant}
-                    size={size}
-                />
-            </Toolbar>
+            <SaveButton
+                icon={
+                    loading ? (
+                        <CircularProgress
+                            className={classes.circularProgress}
+                            size={15}
+                        />
+                    ) : (
+                        <span />
+                    )
+                }
+                label="apihub.login.actions.sign_in"
+                disabled={loading}
+                // color={color}
+                variant={variant}
+                // size={size}
+                className={classes.signinButton}
+                {...rest}
+            />
         </>
     );
 };
 
 const useStyles = makeStyles(
     theme => ({
-        toolbar: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'stretch',
-            flexBasis: '100%',
-            backgroundColor: 'transparent',
-            padding: 0,
+        signinButton: {
+            backgroundColor: '#006837',
+            width: '100%',
+            '&:hover': {
+                backgroundColor: '#1b5e20',
+            },
         },
         circularProgress: {
             color: theme.palette.grey[500],
