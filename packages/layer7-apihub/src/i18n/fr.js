@@ -503,7 +503,7 @@ const apiHubMessages = {
             },
         },
         documents: {
-            name: 'Wiki |||| Wiki',
+            name: 'Actualités BeSafe |||| Actualités BeSafe',
             fields: {
                 title: 'Titre',
                 navtitle: 'URI',
@@ -559,6 +559,9 @@ const apiHubMessages = {
                 'Vous êtes sur le point de supprimer ce document. Voulez-vous continuer ?',
             confirm_delete_document_with_children:
                 'Vous êtes sur le point de supprimer ce document et ses documents enfants. Voulez-vous continuer ?',
+        },
+        products: {
+            name: 'Des produits |||| Des produits',
         },
         registrations: {
             title: 'Créer un compte',
