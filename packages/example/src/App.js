@@ -13,6 +13,7 @@ import {
 import { Layout, HomePage } from './layout';
 import { themeReducer } from './theme';
 import { i18nProvider } from './i18n/i18nProvider';
+
 import { LandingPage } from '../src/landingPage';
 import { Products } from './ui/Products';
 import { TestPage } from './TestPage';
