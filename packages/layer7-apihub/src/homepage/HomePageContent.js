@@ -51,13 +51,10 @@ export const HomePageContent = () => {
                     />
                     <Box className={classes.titlebox}>
                         <Typography variant="h2">
-                            Start Developing with BeSafe!
+                            {translate('home.title')}
                         </Typography>
                         <Typography variant="body1">
-                            Start developing your APIs with BeSafe Bank’s
-                            leading edge API Management Program, that enables
-                            you to securely access banking data and wrap it with
-                            your corporate brand.
+                            {translate('home.description')}
                         </Typography>
                     </Box>
                 </Box>
@@ -99,10 +96,6 @@ const useStyles = makeStyles(
             objectPosition: 'center',
         },
         titlebox: {
-            // position: 'absolute',
-            // bottom: 10,
-            // left: 0,
-            // color: 'white',
             position: 'absolute',
             top: 0,
             left: 0,
@@ -132,7 +125,6 @@ const useStyles = makeStyles(
             '& > p:nth-child(2)': {
                 width: '90%',
                 color: 'white',
-                // marginTop: '10px',
                 marginTop: '20px',
                 fontWeight: 700,
                 [theme.breakpoints.up('md')]: {
