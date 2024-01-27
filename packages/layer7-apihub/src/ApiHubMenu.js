@@ -5,7 +5,13 @@ import classnames from 'classnames';
 import { useTranslate } from 'ra-core';
 import { makeStyles, useMediaQuery } from '@material-ui/core';
 
-import { IconHome, IconApi, IconApps, IconWiki } from './ui/icons';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import ChromeReaderModeOutlinedIcon from '@mui/icons-material/ChromeReaderModeOutlined';
+import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
+import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
+import ImportContactsOutlinedIcon from '@mui/icons-material/ImportContactsOutlined';
+
+import { useApiHubPreference } from './preferences';
 
 /**
  * The ApiHub Menu used in the ApiHub Sidebar.
@@ -20,7 +26,8 @@ export const ApiHubMenu = props => {
         className,
         dense,
         hasDashboard,
-        onMenuClick = () => null,
+        // onMenuClick = () => null,
+        // onMenuClick,
         logout,
         ...rest
     } = props;
@@ -30,9 +37,20 @@ export const ApiHubMenu = props => {
     const isXSmall = useMediaQuery(theme => theme.breakpoints.down('xs'));
     const open = useSelector(state => state.admin.ui.sidebarOpen);
 
+    const [
+        sidebarOpenPreference,
+        writeSidebarOpenPreference,
+    ] = useApiHubPreference('sidebarOpen');
+
+    const onMenuClick = async () => {
+        if (isXSmall) {
+            await writeSidebarOpenPreference(!sidebarOpenPreference);
+        }
+        return;
+    };
+
     // Used to force redraw on navigation
     useSelector(state => state.router.location.pathname);
-
     return (
         <div className={classnames(classes.main, className)} {...rest}>
             {hasDashboard && (
@@ -41,7 +59,7 @@ export const ApiHubMenu = props => {
                     to="/"
                     exact
                     primaryText={translate('ra.page.dashboard')}
-                    leftIcon={<IconHome />}
+                    leftIcon={<HomeOutlinedIcon />}
                     dense={dense}
                     sidebarIsOpen={open}
                     {...rest}
@@ -53,7 +71,7 @@ export const ApiHubMenu = props => {
                 primaryText={translate(`resources.apis.name`, {
                     smart_count: 2,
                 })}
-                leftIcon={<IconApi />}
+                leftIcon={<ChromeReaderModeOutlinedIcon />}
                 onClick={onMenuClick}
                 dense={dense}
                 sidebarIsOpen={open}
@@ -64,22 +82,34 @@ export const ApiHubMenu = props => {
                 primaryText={translate(`resources.applications.name`, {
                     smart_count: 2,
                 })}
-                leftIcon={<IconApps />}
+                leftIcon={<BookmarksOutlinedIcon />}
+                onClick={onMenuClick}
+                dense={dense}
+                sidebarIsOpen={open}
+            />
+            <MenuItemLink
+                key="products"
+                to="/products"
+                primaryText={translate(`resources.products.name`, {
+                    smart_count: 2,
+                })}
+                leftIcon={<AssignmentOutlinedIcon />}
                 onClick={onMenuClick}
                 dense={dense}
                 sidebarIsOpen={open}
             />
             <MenuItemLink
                 key="documents"
-                to="/wiki"
+                to="besafenews"
                 primaryText={translate(`resources.documents.name`, {
                     smart_count: 2,
                 })}
-                leftIcon={<IconWiki />}
+                leftIcon={<ImportContactsOutlinedIcon />}
                 onClick={onMenuClick}
                 dense={dense}
                 sidebarIsOpen={open}
             />
+
             {isXSmall && logout}
         </div>
     );
