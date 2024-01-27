@@ -1,5 +1,5 @@
 import React from 'react';
-import { SaveButton, Toolbar } from 'react-admin';
+import { SaveButton } from 'react-admin';
 import { ValidationError } from 'ra-core';
 import { makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
