@@ -10,10 +10,14 @@ import { useTranslate } from 'ra-core';
 
 export const HomePageContent = () => {
     const classes = useStyles();
+    const translate = useTranslate();
 
     const buttons = [
-        { label: 'Explore APIs', router: '/apis' },
-        { label: 'Explore Applications', router: '/applications' },
+        { label: translate('home.buttons.explore_apis'), router: '/apis' },
+        {
+            label: translate('home.buttons.explore_applications'),
+            router: '/applications',
+        },
     ];
 
     const isSmall = useMediaQuery(theme => theme.breakpoints.down('sm'));
@@ -30,15 +34,12 @@ export const HomePageContent = () => {
                         />
                         <Box className={classes.titlebox}>
                             <Typography variant="h2">
-                                Start Developing with BeSafe!
+                                {translate('home.title')}
                             </Typography>
                         </Box>
                     </Box>
                     <Typography variant="body1">
-                        Start developing your APIs with BeSafe Bank’s leading
-                        edge API Management Program, that enables you to
-                        securely access banking data and wrap it with your
-                        corporate brand.
+                        {translate('home.description')}
                     </Typography>
                 </>
             ) : (
@@ -147,11 +148,11 @@ const useStyles = makeStyles(
             justifyContent: 'center',
         },
         button: {
-            fontSize: '12px',
             maxWidth: '240px',
             width: '100%',
             textTransform: 'none',
             textAlign: 'center',
+            height: '61px',
         },
     }),
     {

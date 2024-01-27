@@ -196,6 +196,15 @@ const apiHubMessages = {
                 'Al hacer clic en Seleccionar grupo de API, acepto los términos y condiciones.',
         },
     },
+    home: {
+        title: '¡Empiece a desarrollar con BeSafe!',
+        description:
+            'Comience a desarrollar sus API con el programa de gestión de API de vanguardia de BeSafe Bank, que le permite acceder de forma segura a los datos bancarios y envolverlos con su marca corporativa.',
+        buttons: {
+            explore_apis: 'Explorar las API',
+            explore_applications: 'Explorar Aplicaciones',
+        },
+    },
     resources: {
         apis: {
             name: 'API |||| Las API',
