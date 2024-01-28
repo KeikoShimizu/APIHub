@@ -22,7 +22,7 @@ export const Footer = () => {
 
 const useStyles = makeStyles(theme => ({
     root: {
-        marginTop: '20px',
+        marginTop: '30px',
     },
     copyright: {
         fontSize: '0.75rem',

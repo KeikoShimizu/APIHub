@@ -99,7 +99,6 @@ const useStyles = makeStyles(
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap',
             overflow: 'hidden',
-            // minWidth: '156px',
         },
         functionbox: {
             alignItems: 'center',
@@ -114,8 +113,7 @@ const useStyles = makeStyles(
             marginTop: theme.spacing(2),
         },
         logo: {
-            height: theme.spacing(6),
-            padding: '10px',
+            height: theme.spacing(7),
         },
     }),
     {
