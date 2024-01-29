@@ -142,9 +142,9 @@ const useStyles = makeStyles(
         button: {
             maxWidth: '240px',
             width: '100%',
-            textTransform: 'none',
             textAlign: 'center',
             height: '61px',
+            textTransform: 'uppercase',
         },
     }),
     {

@@ -195,7 +195,7 @@ const apiHubMessages = {
         description:
             "Start developing your APIs with BeSafe Bank's leading edge API Management Program, that enables you to securely access banking data and wrap it with your corporate brand.",
         buttons: {
-            explore_apis: 'Explorar APIs',
+            explore_apis: 'Explore APIs',
             explore_applications: 'Explore Applications',
         },
     },
