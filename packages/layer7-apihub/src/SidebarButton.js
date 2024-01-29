@@ -41,7 +41,7 @@ export const SidebarButton = ({ open, ...props }) => {
     return (
         <Tooltip title={label}>
             <IconButton
-                color="inherit"
+                // color="inherit"
                 aria-label={label}
                 onClick={handleToggleSidebar}
                 className={classNames(classes.root)}
@@ -62,6 +62,7 @@ const useStyles = makeStyles(
         root: {
             marginLeft: '0.5em',
             marginRight: '0.5em',
+            color: '#006837',
         },
         closed: {
             transition: theme.transitions.create(['transform'], {

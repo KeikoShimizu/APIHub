@@ -179,6 +179,15 @@ const apiHubMessages = {
                 'Facendo clic su Seleziona gruppo API, si accettano i termini e le condizioni',
         },
     },
+    home: {
+        title: 'Inizia a sviluppare con BeSafe!',
+        description:
+            "Inizia a sviluppare le tue API con il programma di gestione API all'avanguardia di BeSafe Bank, che ti consente di accedere in modo sicuro ai dati bancari e di avvolgerli con il tuo marchio aziendale.",
+        buttons: {
+            explore_apis: 'Esplora le API',
+            explore_applications: 'Esplora le applicazioni',
+        },
+    },
     resources: {
         apis: {
             name: 'API |||| API',
@@ -420,7 +429,7 @@ const apiHubMessages = {
                 "Annullamento della distribuzione delle chiavi ed eliminazione dell'applicazione. Questo potrebbe richiedere vari minuti.",
         },
         documents: {
-            name: 'Wiki |||| Wiki',
+            name: 'Novità su BeSafe |||| Novità su BeSafe',
             fields: {
                 title: 'Titolo',
                 navtitle: 'URI',
@@ -472,6 +481,9 @@ const apiHubMessages = {
                 "Si sta per procedere all'eliminazione del documento. Procedere?",
             confirm_delete_document_with_children:
                 "Si sta per procedere all'eliminazione del documento e dei documenti figlio. Procedere?",
+        },
+        products: {
+            name: 'Prodotti |||| Prodotti',
         },
         registrations: {
             title: 'Crea Nuovo account',

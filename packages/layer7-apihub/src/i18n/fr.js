@@ -192,6 +192,15 @@ const apiHubMessages = {
                 "En cliquant sur Sélectionner un groupe d'API, j'accepte les termes et conditions.",
         },
     },
+    home: {
+        title: 'Commencez à développer avec BeSafe!',
+        description:
+            "Commencez à développer vos API avec le programme de gestion d'API de pointe de BeSafe Bank, qui vous permet d'accéder en toute sécurité aux données bancaires et de les intégrer à votre marque d'entreprise.",
+        buttons: {
+            explore_apis: 'Explorer les API',
+            explore_applications: 'Explorer les applications',
+        },
+    },
     resources: {
         apis: {
             name: 'API |||| API',
@@ -503,7 +512,7 @@ const apiHubMessages = {
             },
         },
         documents: {
-            name: 'Wiki |||| Wiki',
+            name: 'Actualités BeSafe |||| Actualités BeSafe',
             fields: {
                 title: 'Titre',
                 navtitle: 'URI',
@@ -559,6 +568,9 @@ const apiHubMessages = {
                 'Vous êtes sur le point de supprimer ce document. Voulez-vous continuer ?',
             confirm_delete_document_with_children:
                 'Vous êtes sur le point de supprimer ce document et ses documents enfants. Voulez-vous continuer ?',
+        },
+        products: {
+            name: 'Des produits |||| Des produits',
         },
         registrations: {
             title: 'Créer un compte',

@@ -190,6 +190,15 @@ const apiHubMessages = {
                 'By clicking Select API Group, I accept the Terms and Conditions',
         },
     },
+    home: {
+        title: 'Start Developing with BeSafe!',
+        description:
+            "Start developing your APIs with BeSafe Bank's leading edge API Management Program, that enables you to securely access banking data and wrap it with your corporate brand.",
+        buttons: {
+            explore_apis: 'Explore APIs',
+            explore_applications: 'Explore Applications',
+        },
+    },
     resources: {
         apis: {
             name: 'API |||| APIs',

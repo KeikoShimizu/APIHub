@@ -28,7 +28,7 @@ export const ApiHubMenu = props => {
         hasDashboard,
         // onMenuClick = () => null,
         // onMenuClick,
-        logout,
+        // logout,
         ...rest
     } = props;
 
@@ -110,7 +110,7 @@ export const ApiHubMenu = props => {
                 sidebarIsOpen={open}
             />
 
-            {isXSmall && logout}
+            {/* {isXSmall && <LoadingIndicator />} */}
         </div>
     );
 };
