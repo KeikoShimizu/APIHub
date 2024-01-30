@@ -227,14 +227,14 @@ The BeSafe Bank app demonstrates the customization of Example app.
 ### Landing page
 
 **Follow these steps:**
-1. Create new a folder called `landingpage` inside `packages/example/src`.
-    - Each component are set in page component called `Landingpage.js` then export from `packages/example/src/landingpage/index.js`. 
+1. Create new a folder called `landingpage` inside `example/src`.
+    - Each component are set in page component called `Landingpage.js` then export from `example/src/landingpage/index.js`. 
 
 3. Create a new blank page without default design (Header and Dashboard is not included)
-    - Set new router inside `packages/example/src/App.js`.
+    - Set new router inside `example/src/App.js`.
     - Pass props `noLayout` in `Route` for creating blank page. For more information, visit `CustomRoutes` documentation on [Material UI noLayout](https://marmelab.com/react-admin/CustomRoutes.html#nolayout) 
 ```js
-// in packages/example/src/App.js
+// in example/src/App.js
 import React from 'react';
 import { Route } from 'react-router';
 import { ApiHubAdmin } from 'layer7-apihub';
@@ -324,7 +324,8 @@ export const LandingPageMain = () => {
 ```
 - For more information, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
 
-5. Set new favicon and title　on Tab bar
+5. Set new favicon and title on Tab bar
+   
 **Favicon**
    - Store Favicon image in `public` folder.
    - 
