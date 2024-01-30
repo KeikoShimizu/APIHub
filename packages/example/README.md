@@ -300,8 +300,35 @@ This is the object for English option. Modify another selection for French `fr.j
 
 export default mergeTranslations(raMessages, apiHubMessages);
 ```
-- Once you implement language objects, import `useTranslate` from `react-admin` and  
-5. Set new fabicon and title　on Tab bar
+- Once you implement language objects, import `useTranslate` from `react-admin` and set property path in element by using `translate()` function.
+```js
+//in src/landingPage/LandingPageMain.js
+import { useTranslate } from 'react-admin';
+
+export const LandingPageMain = () => {
+
+    const translate = useTranslate();
+
+    return (
+        <main>
+            <section>
+                <Typography variant="h2">
+                    {translate('landingpage.main.hero.header')}
+                </Typography>
+                <img src="/besafebank-hero-dots.jpg" alt="bank hero" />
+            </section>
+        ...
+        </main>
+    );
+};
+```
+- For more information, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
+
+5. Set new favicon and title　on Tab bar
+**Favicon**
+   - Store Favicon image in `public` folder.
+   - 
+   -
 
 ### Authentication page
 
