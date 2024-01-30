@@ -219,3 +219,171 @@ export default App;
 ```
 
 You can now access the custom route at URL `/#/contact-us`.
+
+
+# BeSafe Bank App
+The BeSafe Bank app demonstrates the customization of Example app.
+
+### Landing page
+
+**Follow these steps:**
+1. Create new a folder called `landingpage` inside `packages/example/src`.
+    - Each component are set in page component called `Landingpage.js` then export from `packages/example/src/landingpage/index.js`. 
+
+3. Create a new blank page without default design (Header and Dashboard is not included)
+    - Set new router inside `packages/example/src/App.js`.
+    - Pass props `noLayout` in `Route` for creating blank page. For more information, visit `CustomRoutes` documentation on [Material UI noLayout](https://marmelab.com/react-admin/CustomRoutes.html#nolayout) 
+```js
+// in packages/example/src/App.js
+import React from 'react';
+import { Route } from 'react-router';
+import { ApiHubAdmin } from 'layer7-apihub';
+
+import { LandingPage } from '../src/landingPage'; // Import the landingpage component you've just created
+
+const App = () => {
+    return (
+        <ApiHubAdmin
+            customRoutes={[<Route path="/landingpage" component={LandingPage} noLayout />, //noLayout (Set "noLayout" for create a blank page.)
+            ]}
+        />
+    );
+}
+
+export default App;
+```
+ 
+4. Inplement Local Switcher menu on header
+- Import `ApiHubLanguageSwitcher` component from `layer7-apihub/src/ApiHubLanguageSwitcher.js` in the file you want to implement.
+- Modify the language objects inside of folder `layer7-apihub/src
+/i18n`. 
+This is the object for English option. Modify another selection for French `fr.js`and Spanish `es.js`
+```js
+//in layer7-apihub/src/i18n/en.js
+// Landingpage / Here is the Object for language selection.
+    landingpage: {
+        header: {
+            navigation: {
+                New_Register_Now: 'New? Register Now',
+                explore_apis: 'Explore APIs',
+                support: 'Support',
+            },
+            button: {
+                sign_in: 'sign in',
+            },
+        },
+        main: {
+            hero: {
+                header: 'BeSafe is the best at keeping your transactions safe',
+            },
+            api_collection: {
+                header: {
+                    title: 'Start developing with BeSafe',
+                    content:
+                        "Start developing your APIs with BeSafe Bank's leading edge API Management Program that enables you to securely access banking data and wrap it with your corporate brand.",
+                },
+                api_card: {
+                    learn_more: 'Learn more',
+                },
+            },
+        },
+        footer: {
+            navigation: {
+                explore_apis: 'Explore APIs',
+                contact: 'Contact Us',
+                faq: 'FAQ',
+            },
+            copyright: 'All Rights Reserved',
+        },
+    },
+};
+
+export default mergeTranslations(raMessages, apiHubMessages);
+```
+- Once you implement language objects, import `useTranslate` from `react-admin` and  
+5. Set new fabicon and title　on Tab bar
+
+### Authentication page
+
+**Delete multiple sign-in potion**
+
+**Follow these steps:**
+1. 
+2. 
+3. 
+4. 
+
+**Customize styling:**
+
+**Follow these steps:**
+1. 
+2. 
+3. 
+4. 
+
+### Add new option on Dashboard
+
+**Follow these steps:**
+1. 
+2. 
+3. 
+4. 
+
+### Add new option on Dashboard
+
+**Follow these steps:**
+1. 
+2. 
+3. 
+4. 
+
+### Home page Content
+
+**Follow these steps:**
+1. 
+2. 
+3. 
+4. 
+
+## Tag
+Each customization stage is tagged following beafebank Prefix. Below are details about each tag. You can check the progress at that stage by importing the code from each tag.
+
+**Tag list on repository**: https://github.com/KeikoShimizu/APIHub-example/tags
+
+### [`besafebank-1.0.0`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-1.0.0))
+**Overview**: Initial code for Besafebank from [`CAAPIM/APIHub`](https://github.com/CAAPIM/APIHub) Example app.
+
+### [`besafebank-2.0.0`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-2.0.0))
+**Overview**: Landing page (Draft)
+- **Changes**:
+  - Create a new blank page without default design (Header and Dashboard is not included)
+  - Set new router inside `packages/example/src/App.js` 
+  - Inplement Local Switcher menu on header
+  - Set new fabicon and title on Tab bar
+
+### [`besafebank-2.0.1`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-2.0.1)).
+**Overview**: Landing page (Final version)
+- **Changes**:
+  - Change title on Hero section from BSB to BeSafe
+
+### [`besafebank-3.0.1`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-3.0.1)).
+**Overview**: Create a new page (Products）
+- **Changes**:
+  - Create a new page with default design (Header and Dashboard included)
+  - Set new router inside `packages/example/src/App.js`
+  - Add new Link for new page on Dashboard
+
+### [`besafebank-4.0.1`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-4.0.1)).
+**Overview**: Authentication pages (login, signup, and reset-password)
+- **Changes**:
+  - New styling
+  - Delete multiple login option
+  - Delete side content
+
+### [`besafebank-5.0.1`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-5.0.1)).
+**Overview**: Home page (Final version)
+- **Changes**:
+  - Delete Markdown text function
+  - Contents of home page
+
+ 
