@@ -300,7 +300,7 @@ This is the object for English option. Modify another selection for French `fr.j
 
 export default mergeTranslations(raMessages, apiHubMessages);
 ```
-- Once you implement language objects, import `useTranslate` from `react-admin` and set property path in element by using `translate()` function.
+- Once you implement language objects, import `useTranslate` from `react-admin` and set property path by using `translate()` function.
 ```js
 //in src/landingPage/LandingPageMain.js
 import { useTranslate } from 'react-admin';
@@ -322,18 +322,19 @@ export const LandingPageMain = () => {
     );
 };
 ```
-- For more information, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
+   - For more information, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
 
 5. Set new favicon and title on Tab bar
    
-**Favicon**
-   - Store Favicon image in `public` folder.
-   - 
-   -
+**Favicon and Title on Tab bar**
+   - Store favicon image inside `public` folder.
+   - Is you modify fivicon file name, access `link` in the `header` of `public/index.html`.
 
 ### Authentication page
 
-**Delete multiple sign-in potion**
+**Multiple sign-in potion**
+If you want to use or modify multiple sign-in option which is used in the original example app, access `file path` and implement in `file path`.
+
 
 **Follow these steps:**
 1. 
@@ -349,15 +350,7 @@ export const LandingPageMain = () => {
 3. 
 4. 
 
-### Add new option on Dashboard
-
-**Follow these steps:**
-1. 
-2. 
-3. 
-4. 
-
-### Add new option on Dashboard
+### Add new navigation option on Dashboard
 
 **Follow these steps:**
 1. 
@@ -367,11 +360,12 @@ export const LandingPageMain = () => {
 
 ### Home page Content
 
-**Follow these steps:**
-1. 
-2. 
-3. 
-4. 
+1.Markdown text function
+
+If you want to use or modify Markdown text function which is used in the original example app, modify `layer7-apihub/src/homepage` folder.
+
+2. All the contents of "home" page is inside `layer7-apihub/src/homepage/HomePageContent.js`.
+   
 
 ## Tag
 Each customization stage is tagged following beafebank Prefix. Below are details about each tag. You can check the progress at that stage by importing the code from each tag.
@@ -385,7 +379,7 @@ Each customization stage is tagged following beafebank Prefix. Below are details
 **Overview**: Landing page (Draft)
 - **Changes**:
   - Create a new blank page without default design (Header and Dashboard is not included)
-  - Set new router inside `packages/example/src/App.js` 
+  - Set new router inside `example/src/App.js` 
   - Inplement Local Switcher menu on header
   - Set new fabicon and title on Tab bar
 
@@ -398,13 +392,14 @@ Each customization stage is tagged following beafebank Prefix. Below are details
 **Overview**: Create a new page (Products）
 - **Changes**:
   - Create a new page with default design (Header and Dashboard included)
-  - Set new router inside `packages/example/src/App.js`
+  - Set new router inside `example/src/App.js`
   - Add new Link for new page on Dashboard
 
 ### [`besafebank-4.0.1`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-4.0.1)).
 **Overview**: Authentication pages (login, signup, and reset-password)
 - **Changes**:
   - New styling
+  - Change main logo oh Header
   - Delete multiple login option
   - Delete side content
 
