@@ -226,24 +226,24 @@ The BeSafe Bank app demonstrates the customization of Example app.
 
 ## Table of Contents:
 - **Landing page**
-    1. Create a new blank page without default design (Header and Dashboard not include)
-    2. Implement Local Switcher menu on Header
-    3. Set new contents inside i18n (English, French, and Spanish)
-    4. Set new fabicon and title on Tab bar
+    - Create a new blank page without default design (Header and Dashboard not include)
+    - Implement Local Switcher menu on Header
+    - Set new contents inside i18n (English, French, and Spanish)
+    - Set new fabicon and title on Tab bar
 
 - **Authentication page (login, signup, and reset-password)**
-    1. Change main logo on header
-    2. Customize login option
-    3. Customize side content
+    - Change main logo on header
+    - Customize login option
+    - Customize side content
 
 - **Create new page (Product page)**
-    1. Create a new page with default design (Header and Dashboard included)
-    2. Set new router
-    3. Add new Link tag on Dashboard
+    - Create a new page with default design (Header and Dashboard included)
+    - Set new router
+    - Add new Link tag on Dashboard
 
 - **Home page**
-    1. Customize Markdown text function
-    2. Create contents of homepage 
+    - Customize Markdown text function
+    - Create contents of homepage 
 
 
     
