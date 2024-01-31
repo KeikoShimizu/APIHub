@@ -226,43 +226,45 @@ The BeSafe Bank app demonstrates the customization of Example app.
 
 ## Table of Contents:
 - **Landing page**
-    - Create a new blank page without default design (Header and Dashboard not include)
-    - Implement Local Switcher menu on Header
-    - Set new contents inside i18n (English, French, and Spanish)
-    - Set new fabicon and title on Tab bar
+    1. Create a new blank page without default design (Header and Dashboard not include)
+    2. Implement Local Switcher menu on Header
+    3. Set new contents inside i18n (English, French, and Spanish)
+    4. Set new fabicon and title on Tab bar
 
 - **Authentication page (login, signup, and reset-password)**
-    - Change main logo on header
-    - Customize login option
-    - Customize side content
+    1. Change main logo on header
+    2. Customize login option
+    3. Customize side content
 
 - **Create new page (Product page)**
-   - Create a new page with default design (Header and Dashboard included)
-    - Set new router
-    - Add new Link tag on Dashboard
+    1. Create a new page with default design (Header and Dashboard included)
+    2. Set new router
+    3. Add new Link tag on Dashboard
 
 - **Home page**
-    - Customize Markdown text function
-    - Create contents of homepage 
+    1. Customize Markdown text function
+    2. Create contents of homepage 
 
 
     
 ## Landing page
+**1.Create a new blank page without default design (Header and Dashboard not include)**
+- Create new a folder called `landingpage` inside `example/src`.
 
-**1. Create new a folder called `landingpage` inside `example/src`.**
+- Each component are set in page component called `Landingpage.js` then export from `example/src/landingpage/index.js`. 
 
-    - Each component are set in page component called `Landingpage.js` then export from `example/src/landingpage/index.js`. 
+- Create a new blank page without default design (Header and Dashboard is not included)
+    
+- Set new router inside `example/src/App.js`.
+- Pass props `noLayout` in `Route` for creating blank page. For more information, visit `CustomRoutes` documentation on [Material UI noLayout](https://marmelab.com/react-admin/CustomRoutes.html#nolayout)
 
-**2. Create a new blank page without default design (Header and Dashboard is not included)**
-    - Set new router inside `example/src/App.js`.
-    - Pass props `noLayout` in `Route` for creating blank page. For more information, visit `CustomRoutes` documentation on [Material UI noLayout](https://marmelab.com/react-admin/CustomRoutes.html#nolayout) 
 ```js
 // in example/src/App.js
 import React from 'react';
 import { Route } from 'react-router';
 import { ApiHubAdmin } from 'layer7-apihub';
 
-import { LandingPage } from '../src/landingPage'; // Import the landingpage component you've just created
+import { LandingPage } from '../src/landingPage'; // Import the Landing page component you've just created
 
 const App = () => {
     return (
@@ -276,10 +278,12 @@ const App = () => {
 export default App;
 ```
  
-**3. Inplement Local Switcher menu on header**
+**2. Inplement Local Switcher menu on header**
 - Import `ApiHubLanguageSwitcher` component from `layer7-apihub/src/ApiHubLanguageSwitcher.js` in the file you want to implement.
-- Modify the language objects inside of folder `layer7-apihub/src
-/i18n`. 
+
+**3. Set new contents inside i18n (English, French, and Spanish)**
+- Modify the language objects inside of folder `layer7-apihub/src/i18n`.
+  
 This is the object for English option. Modify another selection for French `fr.js`and Spanish `es.js`
 ```js
 //in layer7-apihub/src/i18n/en.js
@@ -351,21 +355,29 @@ export const LandingPageMain = () => {
 **4. Set new favicon and title on Tab bar**
    - Store favicon image inside `public` folder.
    - Is you modify fivicon's file name, access `link` tag in the `header` of file `public/index.html`.
+   - For set title, refer [Change the Page Title](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#change-the-page-title) on Example App.
 
-### Authentication page
+
+## Authentication page
 
 **Multiple sign-in potion**
+
 If you want to use or modify multiple sign-in option which is used in the original example app, access `file path` and implement in `file path`.
 
-**Customize styling:**
 
-**Follow these steps:**
-1. 
-2. 
-3. 
-4. 
 
-### Add new navigation option on Dashboard
+
+
+
+
+
+
+
+
+
+
+## Add new navigation option on Dashboard
+
 Navigation items are in `layer7-apihub/src/ApiHubMenu.js`. 
 
 This `ApiHubMenu` component is passed as a props to create menu on `<Layout>` of React-admin's layout in `layer7-apihub/src/ApiHubLayout.js`. 
@@ -410,7 +422,7 @@ Material Icons : https://mui.com/material-ui/material-icons/
 
 
 
-### Home page Content
+## Home page Content
 
 1.Markdown text function
 
@@ -418,6 +430,7 @@ If you want to use or modify Markdown text function which is used in the origina
 
 2. All the contents of "home" page is inside `layer7-apihub/src/homepage/HomePageContent.js`.
    
+
 
 # Tag
 Each customization stage is tagged following beafebank Prefix. Below are details about each tag. You can check the progress at that stage by importing the code from each tag.
