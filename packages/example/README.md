@@ -289,6 +289,9 @@ export default App;
  
 **2. Inplement Local Switcher menu on header**
 - Import `ApiHubLanguageSwitcher` component from `layer7-apihub/src/ApiHubLanguageSwitcher.js` in the file you want to implement.
+```js
+import { ApiHubLanguageSwitcher } from 'layer7-apihub';
+```
 
 **3. Set new contents inside i18n (English, French, and Spanish)**
 - Modify the language objects inside of folder `layer7-apihub/src/i18n`.
