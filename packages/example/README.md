@@ -225,13 +225,13 @@ You can now access the custom route at URL `/#/contact-us`.
 The BeSafe Bank app demonstrates the customization of Example app.
 
 >## Table of Contents:
->- **Landing page**
->    - Create a new blank page without default design (Header and Dashboard not include)
->    - Implement Local Switcher menu on Header
->    - Set new contents inside i18n (English, French, and Spanish)
->    - Set new fabicon and title on Tab bar
+>**Landing page**
+>  - Create a new blank page without default design (Header and Dashboard not include)
+>  - Implement Local Switcher menu on Header
+>  - Set new contents inside i18n (English, French, and Spanish)
+>  - Set new fabicon and title on Tab bar
 >
->- **Authentication page (login, signup, and reset-password)**
+>  **Authentication page (login, signup, and reset-password)**
 >    - Change main logo on header
 >    - Customize login option
 >    - Customize side content
