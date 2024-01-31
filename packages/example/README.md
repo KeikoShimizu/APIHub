@@ -224,13 +224,36 @@ You can now access the custom route at URL `/#/contact-us`.
 # BeSafe Bank App
 The BeSafe Bank app demonstrates the customization of Example app.
 
-### Landing page
+## Table of Contents:
+- **Landing page**
+    - Create a new blank page without default design (Header and Dashboard not include)
+    - Implement Local Switcher menu on Header
+    - Set new contents inside i18n (English, French, and Spanish)
+    - Set new fabicon and title on Tab bar
 
-**Follow these steps:**
-1. Create new a folder called `landingpage` inside `example/src`.
+- **Authentication page (login, signup, and reset-password)**
+    - Change main logo on header
+    - Customize login option
+    - Customize side content
+
+- **Create new page (Product page)**
+   - Create a new page with default design (Header and Dashboard included)
+    - Set new router
+    - Add new Link tag on Dashboard
+
+- **Home page**
+    - Customize Markdown text function
+    - Create contents of homepage 
+
+
+    
+## Landing page
+
+**1. Create new a folder called `landingpage` inside `example/src`.**
+
     - Each component are set in page component called `Landingpage.js` then export from `example/src/landingpage/index.js`. 
 
-3. Create a new blank page without default design (Header and Dashboard is not included)
+**2. Create a new blank page without default design (Header and Dashboard is not included)**
     - Set new router inside `example/src/App.js`.
     - Pass props `noLayout` in `Route` for creating blank page. For more information, visit `CustomRoutes` documentation on [Material UI noLayout](https://marmelab.com/react-admin/CustomRoutes.html#nolayout) 
 ```js
@@ -253,7 +276,7 @@ const App = () => {
 export default App;
 ```
  
-4. Inplement Local Switcher menu on header
+**3. Inplement Local Switcher menu on header**
 - Import `ApiHubLanguageSwitcher` component from `layer7-apihub/src/ApiHubLanguageSwitcher.js` in the file you want to implement.
 - Modify the language objects inside of folder `layer7-apihub/src
 /i18n`. 
@@ -300,6 +323,7 @@ This is the object for English option. Modify another selection for French `fr.j
 
 export default mergeTranslations(raMessages, apiHubMessages);
 ```
+
 - Once you implement language objects, import `useTranslate` from `react-admin` and set property path by using `translate()` function.
 ```js
 //in src/landingPage/LandingPageMain.js
@@ -324,23 +348,14 @@ export const LandingPageMain = () => {
 ```
    - For more information, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
 
-5. Set new favicon and title on Tab bar
-   
-**Favicon and Title on Tab bar**
+**4. Set new favicon and title on Tab bar**
    - Store favicon image inside `public` folder.
-   - Is you modify fivicon file name, access `link` in the `header` of `public/index.html`.
+   - Is you modify fivicon's file name, access `link` tag in the `header` of file `public/index.html`.
 
 ### Authentication page
 
 **Multiple sign-in potion**
 If you want to use or modify multiple sign-in option which is used in the original example app, access `file path` and implement in `file path`.
-
-
-**Follow these steps:**
-1. 
-2. 
-3. 
-4. 
 
 **Customize styling:**
 
@@ -351,12 +366,49 @@ If you want to use or modify multiple sign-in option which is used in the origin
 4. 
 
 ### Add new navigation option on Dashboard
+Navigation items are in `layer7-apihub/src/ApiHubMenu.js`. 
+
+This `ApiHubMenu` component is passed as a props to create menu on `<Layout>` of React-admin's layout in `layer7-apihub/src/ApiHubLayout.js`. 
+```js
+//in layer7-apihub/src/ApiHubLayout.js
+import { Layout } from 'react-admin';
+import { ApiHubAppBar } from './ApiHubAppBar';
+import { ApiHubMenu } from './ApiHubMenu';
+import { useSelector } from 'react-redux';
+
+export const ApiHubLayout = ({
+    appBar = ApiHubAppBar, // TopBar (Header part)
+    menu = ApiHubMenu, // Dashboard (Left navigation part)
+    ...rest
+}) => {
+    return <Layout appBar={appBar} menu={menu} {...rest} />;
+};
+```
+Document about React-admin `<Layout>`: https://marmelab.com/react-admin/Layout.html
+
 
 **Follow these steps:**
-1. 
-2. 
-3. 
-4. 
+***Create new navigation option***
+Implement new `<MenuItemLink>` and set address of router, icon, and primary text using with `translate()`.
+```js
+//in layer7-apihub/src/ApiHubMenu.js
+<MenuItemLink
+                key="apis" // Set new key name
+                to="/apis" // Add new router address
+                primaryText={translate(`resources.apis.name`, {
+                    smart_count: 2,
+                })}
+                leftIcon={<ChromeReaderModeOutlinedIcon />} // Import Material UI's Icon 
+                onClick={onMenuClick}
+                dense={dense}
+                sidebarIsOpen={open}
+            />
+```
+Document about `<MenuItemLink>`: https://marmelab.com/react-admin/Buttons.html#menuitemlink
+
+Material Icons : https://mui.com/material-ui/material-icons/
+
+
 
 ### Home page Content
 
@@ -367,7 +419,7 @@ If you want to use or modify Markdown text function which is used in the origina
 2. All the contents of "home" page is inside `layer7-apihub/src/homepage/HomePageContent.js`.
    
 
-## Tag
+# Tag
 Each customization stage is tagged following beafebank Prefix. Below are details about each tag. You can check the progress at that stage by importing the code from each tag.
 
 **Tag list on repository**: https://github.com/KeikoShimizu/APIHub-example/tags
