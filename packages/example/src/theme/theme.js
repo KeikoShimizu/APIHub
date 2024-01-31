@@ -72,7 +72,54 @@ export const darkTheme = createMuiTheme(
     })
 );
 
-export const lightTheme = defaultTheme;
+const lightPalette = createPalette({
+    primary: {
+        main: '#006837',
+        contrastText: '#ffffff',
+    },
+    secondary: {
+        main: '#F15A24',
+        contrastText: '#F9D9D2',
+    },
+    type: 'light',
+});
+
+export const lightTheme = createMuiTheme(
+    merge({}, defaultTheme, {
+        palette: lightPalette,
+        overrides: {
+            MuiButton: {
+                containedPrimary: {
+                    color: lightPalette.common.white,
+                    backgroundColor: lightPalette.primary.main,
+                },
+                containedSecondary: {
+                    color: lightPalette.common.white,
+                    backgroundColor: lightPalette.secondary.main,
+                },
+                outlinedPrimary: {
+                    color: lightPalette.primary.main,
+                    borderColor: lightPalette.primary.main,
+                },
+                outlinedSecondary: {
+                    color: lightPalette.common.white,
+                    borderColor: lightPalette.common.white,
+                },
+                textPrimary: {
+                    color: lightPalette.primary.main,
+                },
+                textSecondary: {
+                    color: lightPalette.common.white,
+                },
+            },
+            Layer7ApplicationOverviewField: {
+                overviewScrollFadeColor: {
+                    background: `linear-gradient(to bottom, rgba(66, 66, 66, 0) 0%, rgba(66, 66, 66, 1) 100%)`,
+                },
+            },
+        },
+    })
+);
 
 export const useTheme = () => {
     const {
