@@ -289,7 +289,7 @@ export default App;
  
 **2. Inplement Local Switcher menu on header**
 - Import `ApiHubLanguageSwitcher` component from `layer7-apihub/src/ApiHubLanguageSwitcher.js` in the file you want to implement.
-```js
+```
 import { ApiHubLanguageSwitcher } from 'layer7-apihub';
 ```
 
