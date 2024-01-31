@@ -222,28 +222,28 @@ You can now access the custom route at URL `/#/contact-us`.
 
 
 # BeSafe Bank App
-The BeSafe Bank app demonstrates the customization of Example app.
+The BeSafe Bank app demonstrates the customization of Example app. Clone from `master` branch from [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. Also review progress of development for comparing each steps by install source code from [Tag](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
 
 >## Table of Contents:
->**Landing page**
+> **Landing page**
 >  - Create a new blank page without default design (Header and Dashboard not include)
 >  - Implement Local Switcher menu on Header
 >  - Set new contents inside i18n (English, French, and Spanish)
 >  - Set new fabicon and title on Tab bar
 >
->  **Authentication page (login, signup, and reset-password)**
->    - Change main logo on header
->    - Customize login option
->    - Customize side content
+> **Authentication page (login, signup, and reset-password)**
+>  - Change main logo on header
+>  - Customize login option
+>  - Customize side content
 >
->- **Create new page (Product page)**
->    - Create a new page with default design (Header and Dashboard included)
->    - Set new router
->    - Add new Link tag on Dashboard
+> **Create new page (Product page)**
+>  - Create a new page with default design (Header and Dashboard included)
+>  - Set new router
+>  - Add new Link tag on Dashboard
 >
->- **Home page**
->    - Customize Markdown text function
->    - Create contents of homepage 
+> **Home page**
+>  - Customize Markdown text function
+>  - Create contents of homepage 
 
 
     
@@ -294,7 +294,7 @@ import { ApiHubLanguageSwitcher } from 'layer7-apihub';
 ```
 
 **3. Set new contents inside i18n (English, French, and Spanish)**
-- Modify the language objects inside of folder `layer7-apihub/src/i18n`.
+- Modify the language objects inside of folder `layer7-apihub/src/i18n`. Currently in BeSafe Bank app, we have 3 language options English, French and Spanish. 
   
 This is the object for English option. Modify another selection for French `fr.js`and Spanish `es.js`
 ```js
@@ -340,7 +340,7 @@ This is the object for English option. Modify another selection for French `fr.j
 export default mergeTranslations(raMessages, apiHubMessages);
 ```
 
-- Once you implement language objects, import `useTranslate` from `react-admin` and set property path by using `translate()` function.
+- Once you implemented language objects inside `i18n`, import `useTranslate` from `react-admin` and set property path by using `translate()` function in the element you want to display.
 ```js
 //in src/landingPage/LandingPageMain.js
 import { useTranslate } from 'react-admin';
@@ -362,11 +362,22 @@ export const LandingPageMain = () => {
     );
 };
 ```
-   - For more information, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
+   - If you want to implement new language, refer [Add Additional Language Support in the Layer7 API Hub Library](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/layer7-apihub/README.md#add-additional-language-support-in-the-layer7-api-hub-library). 
+   - For more information about Language Support, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
 
 **4. Set new favicon and title on Tab bar**
-   - Store favicon image inside `public` folder.
-   - Is you modify fivicon's file name, access `link` tag in the `header` of file `public/index.html`.
+   - Store favicon image inside `example/public` folder.
+   - Is you modify fivicon's file name, access `link` tag in the `header` of file `example/public/index.html`.
+     ```js
+     <head>
+        <meta charset="utf-8" />
+        <link
+            id="favicon"
+            rel="icon"
+            href="%PUBLIC_URL%/favicon.ico" // Change file name "favicon.ico" to new file name, if nessesary.
+            data-react-helmet="true"
+        />
+     ```
    - For set title, refer [Change the Page Title](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#change-the-page-title) on Example App.
 
 
