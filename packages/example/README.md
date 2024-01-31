@@ -224,26 +224,26 @@ You can now access the custom route at URL `/#/contact-us`.
 # BeSafe Bank App
 The BeSafe Bank app demonstrates the customization of Example app.
 
-## Table of Contents:
-- **Landing page**
-    - Create a new blank page without default design (Header and Dashboard not include)
-    - Implement Local Switcher menu on Header
-    - Set new contents inside i18n (English, French, and Spanish)
-    - Set new fabicon and title on Tab bar
-
-- **Authentication page (login, signup, and reset-password)**
-    - Change main logo on header
-    - Customize login option
-    - Customize side content
-
-- **Create new page (Product page)**
-    - Create a new page with default design (Header and Dashboard included)
-    - Set new router
-    - Add new Link tag on Dashboard
-
-- **Home page**
-    - Customize Markdown text function
-    - Create contents of homepage 
+>## Table of Contents:
+>- **Landing page**
+>    - Create a new blank page without default design (Header and Dashboard not include)
+>    - Implement Local Switcher menu on Header
+>    - Set new contents inside i18n (English, French, and Spanish)
+>    - Set new fabicon and title on Tab bar
+>
+>- **Authentication page (login, signup, and reset-password)**
+>    - Change main logo on header
+>    - Customize login option
+>    - Customize side content
+>
+>- **Create new page (Product page)**
+>    - Create a new page with default design (Header and Dashboard included)
+>    - Set new router
+>    - Add new Link tag on Dashboard
+>
+>- **Home page**
+>    - Customize Markdown text function
+>    - Create contents of homepage 
 
 
     
@@ -251,7 +251,15 @@ The BeSafe Bank app demonstrates the customization of Example app.
 **1.Create a new blank page without default design (Header and Dashboard not include)**
 - Create new a folder called `landingpage` inside `example/src`.
 
-- Each component are set in page component called `Landingpage.js` then export from `example/src/landingpage/index.js`. 
+- Each child components are imported inside of `Landingpage.js` then export from `example/src/landingpage/index.js`.
+      `example/
+        |-- src/
+        |   |-- landingPage/
+        |   |   |-- index.js/
+        |   |   |-- LandingPage.js/
+        |   |   |-- LandingPageFooter.js/
+        |   |   |-- LandingPageHeader.js/
+        |   |   |-- LandingPageMain.js/`
 
 - Create a new blank page without default design (Header and Dashboard is not included)
     
