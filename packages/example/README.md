@@ -249,7 +249,7 @@ The BeSafe Bank app demonstrates the customization of Example app.
     
 ## Landing page
 **1.Create a new blank page without default design (Header and Dashboard not include)**
-- Create new a folder called `landingpage` inside `example/src`.
+1) Create new a folder called `landingpage` inside `example/src`.
 
 - Each child components are imported inside of `Landingpage.js` then export from `example/src/landingpage/index.js`.
       `example/
@@ -261,7 +261,7 @@ The BeSafe Bank app demonstrates the customization of Example app.
         |   |   |-- LandingPageHeader.js/
         |   |   |-- LandingPageMain.js/`
 
-- Create a new blank page without default design (Header and Dashboard is not included)
+3) Create a new blank page without default design (Header and Dashboard is not included)
     
 - Set new router inside `example/src/App.js`.
 - Pass props `noLayout` in `Route` for creating blank page. For more information, visit `CustomRoutes` documentation on [Material UI noLayout](https://marmelab.com/react-admin/CustomRoutes.html#nolayout)
