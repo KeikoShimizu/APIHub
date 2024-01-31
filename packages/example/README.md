@@ -251,15 +251,16 @@ The BeSafe Bank app demonstrates the customization of Example app.
 **1.Create a new blank page without default design (Header and Dashboard not include)**
 1) Create new a folder called `landingpage` inside `example/src`.
 
-- Each child components are imported inside of `Landingpage.js` then export from `example/src/landingpage/index.js`.
-      `example/
+- Each child components are imported inside of `Landingpage.js` then export from `index.js`.
+
+        example/
         |-- src/
         |   |-- landingPage/
         |   |   |-- index.js/
         |   |   |-- LandingPage.js/
         |   |   |-- LandingPageFooter.js/
         |   |   |-- LandingPageHeader.js/
-        |   |   |-- LandingPageMain.js/`
+        |   |   |-- LandingPageMain.js/
 
 3) Create a new blank page without default design (Header and Dashboard is not included)
     
