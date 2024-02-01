@@ -228,24 +228,23 @@ Also if you want to see the progress of development compare each step by install
 
 >## Table of Contents:
 > #### [Landing page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password)
->  - Create a new blank page without default <Layout> design (Header and Dashboard not include)
->  - Implement Local Switcher menu on Header
->  - Set new localized texts inside i18n (English, French, and Spanish)
->  - Set new favicon and title on app Tab bar
+>  - [Create a new blank page without default <Layout> design (Header and Dashboard not include)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-blank-page-without-default-design-header-and-dashboard-not-included)
+>  - [Implement Local Switcher menu on Header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#implement-local-switcher-menu-on-header)
+>  - [Set new localized texts inside i18n (English, French, and Spanish)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-localized-texts-inside-i18n-english-french-and-spanish)
+>  - [Set new favicon and title on app Tab bar](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
 >
 > #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password)
->  - Change main logo on header
->  - Customize multiple login option
->  - Customize side content
+>  - [Change main logo on header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
+>  - [Customize multiple login option](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
+>  - [Customize side content](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#customize-side-content)
 >
 > #### [Create new page (Products page)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
->  - Create a new page with default <Layout> design (Header and Dashboard included)
->  - Set new router
->  - Add new page Link on Dashboard
+>  - [Create a new page with default <Layout> design (Header and Dashboard included)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#add-new-page-link-on-dashboard)
+>  - [Add new page Link on Dashboard](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#add-new-page-link-on-dashboard)
 >
 > #### [Home page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#home-page)
->  - Customize Markdown text function
->  - Create contents of homepage 
+>  - [Customize Markdown text function](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#markdown-text-function)
+>  - [Create contents of homepage]() 
 
 
 
