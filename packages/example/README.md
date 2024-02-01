@@ -222,22 +222,22 @@ You can now access the custom route at URL `/#/contact-us`.
 
 
 # BeSafe Bank App
-The BeSafe Bank app demonstrates the customization of Example app. Clone from `master` branch from [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. Also review progress of development for comparing each steps by install source code from [Tag](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
+The BeSafe Bank app demonstrates the customization of Example app. Clone from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. Also if you can to see the progress of development for comparing each steps by install source code from [Tag](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
 
 >## Table of Contents:
 > **Landing page**
->  - Create a new blank page without default design (Header and Dashboard not include)
+>  - Create a new blank page without default <Layout> design (Header and Dashboard not include)
 >  - Implement Local Switcher menu on Header
->  - Set new contents inside i18n (English, French, and Spanish)
->  - Set new fabicon and title on Tab bar
+>  - Set new localized texts inside i18n (English, French, and Spanish)
+>  - Set new fabicon and title on app Tab bar
 >
 > **Authentication page (Login, Signup, and Reset-Password)**
 >  - Change main logo on header
 >  - Customize login option
 >  - Customize side content
 >
-> **Create new page (Product page)**
->  - Create a new page with default design (Header and Dashboard included)
+> **Create new page (Products page)**
+>  - Create a new page with default <Layout> design (Header and Dashboard included)
 >  - Set new router
 >  - Add new Link tag on Dashboard
 >
@@ -246,9 +246,12 @@ The BeSafe Bank app demonstrates the customization of Example app. Clone from `m
 >  - Create contents of homepage 
 
 
+
     
 ## Landing page
+
 **1.Create a new blank page without default design (Header and Dashboard not include)**
+
 1) Create new a folder called `landingpage` inside `example/src`.
 
 - Each child components are imported inside of `Landingpage.js` then export from `index.js`.
@@ -290,15 +293,21 @@ const App = () => {
 
 export default App;
 ```
+
  
 **2. Inplement Local Switcher menu on header**
+
 - Import `ApiHubLanguageSwitcher` component from `layer7-apihub/src/ApiHubLanguageSwitcher.js` in the file you want to implement.
+
+This is tied across the entire BeSafe Bank app, so changing the language will apply throughout the app.
+
 ```
 import { ApiHubLanguageSwitcher } from 'layer7-apihub';
 ```
 
+
 **3. Set new contents inside i18n (English, French, and Spanish)**
-- Modify the language objects inside of `layer7-apihub/src/i18n`. Currently in BeSafe Bank app, we have 3 language options English, French and Spanish. 
+- Create the language objects for landing page inside of `layer7-apihub/src/i18n`. Currently in BeSafe Bank app, we have 3 language options English, French and Spanish. 
 
         layer7-apihub/
         |-- src/
@@ -308,9 +317,11 @@ import { ApiHubLanguageSwitcher } from 'layer7-apihub';
         |   |   |-- es.js/ // Spanish
         |   |   |-- fr.js/ // French
         ......
+
   
 This is the object for English option in `en.js`. Each language file has same key and different properties displayed in different languages. 
-Once you add new language object in `en.js`, cope the object keys then paste in `fr.js` and `es.js`.
+After adding the new language object to "en.js", copy the object key you created for the landing page and paste it into "fr.js" and "es.js" and enter the respective language in the property.
+
 ```js
 //in layer7-apihub/src/i18n/en.js
 // Landingpage / Here is the Object for language selection.
@@ -354,9 +365,11 @@ Once you add new language object in `en.js`, cope the object keys then paste in 
 export default mergeTranslations(raMessages, apiHubMessages);
 ```
 
-- Once you implemented language objects inside `i18n`, import `useTranslate` from `react-admin` and set property path by using `translate()` function in the element you want to display.
+- Once you implemented language objects inside `i18n` folder, import [useTranslate](https://marmelab.com/react-admin/useTranslate.html) from `react-admin` and set localozed text key you set in each language file(`en.js`, `fr.js` and `es.js`) by using `translate()` function in the element you want to display. This is a example of how to implement `translate()` in a `<Typography>` element.
+
 ```js
 //in src/landingPage/LandingPageMain.js
+
 import { useTranslate } from 'react-admin';
 
 export const LandingPageMain = () => {
@@ -367,7 +380,7 @@ export const LandingPageMain = () => {
         <main>
             <section>
                 <Typography variant="h2">
-                    {translate('landingpage.main.hero.header')}
+                    {translate('landingpage.main.hero.header')} // Implement localized text key with translate().
                 </Typography>
                 <img src="/besafebank-hero-dots.jpg" alt="bank hero" />
             </section>
@@ -376,13 +389,17 @@ export const LandingPageMain = () => {
     );
 };
 ```
+
    - If you want to implement new language, refer [Add Additional Language Support in the Layer7 API Hub Library](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/layer7-apihub/README.md#add-additional-language-support-in-the-layer7-api-hub-library). 
    - For more information about Language Support, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
+
 
 **4. Set new favicon and title on Tab bar**
    - Store favicon image inside `example/public` folder.
    - Is you modify fivicon's file name, access `link` tag in the `header` of file `example/public/index.html`.
+     
      ```js
+     // in example/public/index.html
      <head>
         <meta charset="utf-8" />
         <link
@@ -392,7 +409,9 @@ export const LandingPageMain = () => {
             data-react-helmet="true"
         />
      ```
+     
    - For set title, refer [Change the Page Title](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#change-the-page-title) on Example App.
+
 
 
 
@@ -400,18 +419,19 @@ export const LandingPageMain = () => {
 
 **Multiple sign-in potion**
 
-- We had  multiple sign-in option in original Example app. If you want to use or modify multiple sign-in option which is used in the original example app, access `file path` and implement in `file path`.
+- We had  multiple sign-in option in original Example app. If you want to use or modify multiple sign-in option which is used in the original Example app, access `file path` and implement in `file path`.
 
 **Side content**
 
-- We had an image on the side of Authentication section in original Example app. If you want to implement another contents as a  side content in all authentication page, create new `SideContent.js` file in `example/src/authentication`. Then import `<SideContent />` component inside `example/src/authentication/ThemedAuthenticationLayout.js`.
+- We had an image on the side of Authentication section in original Example app. If you want to implement new content as a side content in all authentication pages, create new `SideContent.js` file in `example/src/authentication`. Then import `<SideContent />` component inside `example/src/authentication/ThemedAuthenticationLayout.js`.
   
 **Change main logo oh Header**
+
 - Store new Logo image inside `example/public` folder.
-- Modify Logo image path inside `BrandLogo.js`. Once you change the path, all the Logo on `Authentication` page and `Header` will change (Except Landing page).
+- Modify Logo image path inside `BrandLogo.js`. Once you change the path, all the Logo on `Authentication` pages and `Header` will change (Except Landing page).
+ 
 ```js
 // in example/src/ui/icons/BrandLogo.js
-
     export const BrandLogo = props => {
         let path = props.img || 'XXX'; // Set you Logo image path in `XXX`.
         return <img className={props.className} src={path} alt={'Logo'} />;
@@ -420,8 +440,11 @@ export const LandingPageMain = () => {
 
 
 
-## Create new page (Product page)
-- Create a new page with default design (Used React-admin [Layout](https://marmelab.com/react-admin/Layout.html#alternative-layouts)). This time, we implement `product` page with React-admin's `<Layout/>` styling. so no need to pass a props `noLayout`.
+
+## Create new page (Products page)
+
+- Create a new page with default design (Used React-admin [Layout](https://marmelab.com/react-admin/Layout.html#alternative-layouts)). This time, we implement `products` page with React-admin's `<Layout/>` styling. so no need to pass a props `noLayout` as we did for landing page.
+  
 ```js
 // in example/src/App.js
         <ApiHubAdmin
@@ -435,11 +458,13 @@ export const LandingPageMain = () => {
 
 
 
+
 ## Add new page Link on Dashboard
 
 - Navigation component is in `layer7-apihub/src/ApiHubMenu.js`. 
 
-This `ApiHubMenu` component is passed as a props to create menu on [Layout](https://marmelab.com/react-admin/Layout.html#alternative-layouts) of React-admin's layout in `layer7-apihub/src/ApiHubLayout.js`. 
+This `ApiHubMenu` component is passed as a props to create `menu` on React-admin's [Layout](https://marmelab.com/react-admin/Layout.html#alternative-layouts) in `layer7-apihub/src/ApiHubLayout.js`. 
+
 ```js
 //in layer7-apihub/src/ApiHubLayout.js
 import { Layout } from 'react-admin';
@@ -455,10 +480,13 @@ export const ApiHubLayout = ({
     return <Layout appBar={appBar} menu={menu} {...rest} />;
 };
 ```
+
 - Document about React-admin `<Layout>`: https://marmelab.com/react-admin/Layout.html
+
 
 ***Create new page Link on Dashboard***
 - Implement new `<MenuItemLink>` and set router path, icon, and primary text using with `translate()`.
+  
 ```js
 //in layer7-apihub/src/ApiHubMenu.js
 <MenuItemLink
@@ -473,9 +501,11 @@ export const ApiHubLayout = ({
                 sidebarIsOpen={open}
             />
 ```
+
 - Document about `<MenuItemLink>`: https://marmelab.com/react-admin/Buttons.html#menuitemlink
 
 - Material Icons : https://mui.com/material-ui/material-icons/
+
 
 
 
@@ -489,13 +519,15 @@ export const ApiHubLayout = ({
     Markdown edit component: ``
 
 2. All contents of "home" page is inside `layer7-apihub/src/homepage/HomePageContent.js`.
+
    
 
 
 # Tag List
-Each customization stage is tagged following beafebank Prefix. Below are details about each tag. You can check the progress at that stage by importing the code from each tag.
 
-**Tag list on repository**: https://github.com/KeikoShimizu/APIHub-example/tags
+Each customization stage is tagged following `beafebank` Prefix. Below are details about each tag. You can check the progress of development at that stage by importing the source code from each tag.
+
+**Tag list on `API-Hub-example` repository**: https://github.com/KeikoShimizu/APIHub-example/tags
 
 ### [`besafebank-1.0.0`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-1.0.0))
 **Overview**: Initial code for Besafebank from [`CAAPIM/APIHub`](https://github.com/CAAPIM/APIHub) Example app.
