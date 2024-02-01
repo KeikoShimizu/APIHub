@@ -395,18 +395,35 @@ export const LandingPageMain = () => {
    - For set title, refer [Change the Page Title](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#change-the-page-title) on Example App.
 
 
+
 ## Authentication page (Login, Signup, and Reset-Password)
 
 **Multiple sign-in potion**
 
-If you want to use or modify multiple sign-in option which is used in the original example app, access `file path` and implement in `file path`.
+- We had  multiple sign-in option in original Example app. If you want to use or modify multiple sign-in option which is used in the original example app, access `file path` and implement in `file path`.
 
+**Side content**
+
+- We had an image on the side of Authentication section in original Example app. If you want to implement another contents as a  side content in all authentication page, create new `SideContent.js` file in `example/src/authentication`. Then import `<SideContent />` component inside `example/src/authentication/ThemedAuthenticationLayout.js`.
+  
+**Change main logo oh Header**
+- Store new Logo image inside `example/public` folder.
+- Modify Logo image path inside `BrandLogo.js`. Once you change the path, all the Logo on `Authentication` page and `Header` will change (Except Landing page).
+```js
+// in example/src/ui/icons/BrandLogo.js
+
+    export const BrandLogo = props => {
+        let path = props.img || 'XXX'; // Set you Logo image path in `XXX`.
+        return <img className={props.className} src={path} alt={'Logo'} />;
+    };
+```
 
 
 
 ## Create new page (Product page)
-- Create a new page with default design (Used React-admin [<Layout>](https://marmelab.com/react-admin/Layout.html#alternative-layouts)). This time, we implement `product` page with React-admin's `<Layout/>` styling. so no need to pass a props `noLayout`.
+- Create a new page with default design (Used React-admin [Layout](https://marmelab.com/react-admin/Layout.html#alternative-layouts)). This time, we implement `product` page with React-admin's `<Layout/>` styling. so no need to pass a props `noLayout`.
 ```js
+// in example/src/App.js
         <ApiHubAdmin
             customRoutes={[
                 <Route path="/products" component={Products} />, // New page called "products". Set router here
@@ -420,9 +437,9 @@ If you want to use or modify multiple sign-in option which is used in the origin
 
 ## Add new page Link on Dashboard
 
-- Navigation is in `layer7-apihub/src/ApiHubMenu.js`. 
+- Navigation component is in `layer7-apihub/src/ApiHubMenu.js`. 
 
-This `ApiHubMenu` component is passed as a props to create menu on [<Layout>](https://marmelab.com/react-admin/Layout.html#alternative-layouts) of React-admin's layout in `layer7-apihub/src/ApiHubLayout.js`. 
+This `ApiHubMenu` component is passed as a props to create menu on [Layout](https://marmelab.com/react-admin/Layout.html#alternative-layouts) of React-admin's layout in `layer7-apihub/src/ApiHubLayout.js`. 
 ```js
 //in layer7-apihub/src/ApiHubLayout.js
 import { Layout } from 'react-admin';
@@ -440,19 +457,17 @@ export const ApiHubLayout = ({
 ```
 - Document about React-admin `<Layout>`: https://marmelab.com/react-admin/Layout.html
 
-
-**Follow these steps:**
 ***Create new page Link on Dashboard***
-- Implement new `<MenuItemLink>` and set address of router, icon, and primary text using with `translate()`.
+- Implement new `<MenuItemLink>` and set router path, icon, and primary text using with `translate()`.
 ```js
 //in layer7-apihub/src/ApiHubMenu.js
 <MenuItemLink
                 key="apis" // Set new key name
-                to="/apis" // Add new router address
+                to="/apis" // Add new router path
                 primaryText={translate(`resources.apis.name`, {
                     smart_count: 2,
                 })}
-                leftIcon={<ChromeReaderModeOutlinedIcon />} // Import Material UI's Icon 
+                leftIcon={<ChromeReaderModeOutlinedIcon />} // Import from Material UI's Icon 
                 onClick={onMenuClick}
                 dense={dense}
                 sidebarIsOpen={open}
@@ -473,7 +488,7 @@ export const ApiHubLayout = ({
     Edit button component: `layer7-apihub/src/homepage/HomePageButton.js`
     Markdown edit component: ``
 
-2. All the contents of "home" page is inside `layer7-apihub/src/homepage/HomePageContent.js`.
+2. All contents of "home" page is inside `layer7-apihub/src/homepage/HomePageContent.js`.
    
 
 
