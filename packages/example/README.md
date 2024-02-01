@@ -464,7 +464,7 @@ If you want to use or modify Markdown text function which is used in the origina
    
 
 
-# Tag
+# Tag List
 Each customization stage is tagged following beafebank Prefix. Below are details about each tag. You can check the progress at that stage by importing the code from each tag.
 
 **Tag list on repository**: https://github.com/KeikoShimizu/APIHub-example/tags
@@ -490,12 +490,11 @@ Each customization stage is tagged following beafebank Prefix. Below are details
 - **Changes**:
   - Create a new page with default design (Header and Dashboard included)
   - Set new router inside `example/src/App.js`
-  - Add new Link for new page on Dashboard
+  - Add new page Link on Dashboard
 
 ### [`besafebank-4.0.1`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-4.0.1)).
 **Overview**: Authentication pages (Login, Signin, and Reset-Password)
 - **Changes**:
-  - New styling
   - Change main logo oh Header
   - Delete multiple login option
   - Delete side content
