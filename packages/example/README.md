@@ -520,7 +520,7 @@ export const ApiHubLayout = ({
 
 - If you want to use or modify Markdown text function which is used in the original example app, modify `layer7-apihub/src/homepage` folder.
 
-    **HomePage Edit Button**: ｀HomePageEditButton｀component inside `layer7-apihub/src/homepage/HomePageButton.js` file.
+    **Edit Button**: `HomePageEditButton` component inside `layer7-apihub/src/homepage/HomePageButton.js` file.
   
     **Markdown Content Editor**: `HomePageContentEditor` component inside `layer7-apihub/src/homepage/HomePageContent.js` file.
 
