@@ -233,7 +233,7 @@ Also if you want to see the progress of development compare each step by install
 >  - [Set new localized texts inside i18n (English, French, and Spanish)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-localized-texts-inside-i18n-english-french-and-spanish)
 >  - [Set new favicon and title on app Tab bar](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
 >
-> #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password)
+> #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password-1)
 >  - [Change main logo on header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#change-main-logo-oh-header)
 >  - [Customize multiple login option](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#customize-multiple-sign-in-potion)
 >  - [Customize side content](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#customize-side-content)
@@ -242,7 +242,7 @@ Also if you want to see the progress of development compare each step by install
 >  - [Create a new page with default <Layout> design (Header and Dashboard included)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
 >  - [Add new page Link on Dashboard](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#add-new-page-link-on-dashboard)
 >
-> #### [Home page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#home-page)
+> #### [Home page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#home-page-1)
 >  - [Customize Markdown text function](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#markdown-text-function)
 >  - [Create contents of homepage](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#contents-of-home-page) 
 
