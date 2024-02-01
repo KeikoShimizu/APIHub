@@ -222,7 +222,7 @@ You can now access the custom route at URL `/#/contact-us`.
 
 
 # BeSafe Bank App
-The BeSafe Bank app demonstrates the customization of Example app. Clone from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. Also if you can to see the progress of development for comparing each steps by install source code from [Tag](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
+BeSafe Bank app demonstrates the customization of the Example app. Clone from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. Also if you want to see the progress of development compare each step by installing source code from [Tag](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
 
 >## Table of Contents:
 > **Landing page**
@@ -295,7 +295,7 @@ export default App;
 ```
 
  
-**2. Inplement Local Switcher menu on header**
+**2. Inplement Local Switcher menu on Header**
 
 - Import `ApiHubLanguageSwitcher` component from `layer7-apihub/src/ApiHubLanguageSwitcher.js` in the file you want to implement.
 
@@ -306,7 +306,7 @@ import { ApiHubLanguageSwitcher } from 'layer7-apihub';
 ```
 
 
-**3. Set new contents inside i18n (English, French, and Spanish)**
+**3. Set new localized texts inside i18n (English, French, and Spanish)**
 - Create the language objects for landing page inside of `layer7-apihub/src/i18n`. Currently in BeSafe Bank app, we have 3 language options English, French and Spanish. 
 
         layer7-apihub/
