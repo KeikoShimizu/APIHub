@@ -538,7 +538,7 @@ Each customization stage is tagged following `besafebank` Prefix. Below are deta
 ### [`besafebank-1.0.0`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-1.0.0])
 **Overview**: Initial code for Besafebank from [`CAAPIM/APIHub`](https://github.com/CAAPIM/APIHub) Example app.
 
-### [`besafebank-2.0.0`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-2.0.0))
+### [`besafebank-2.0.0`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-2.0.0])
 **Overview**: Landing page (Draft)
 - **Changes**:
   - Create a new blank page without default design (Header and Dashboard are not included)
@@ -546,26 +546,26 @@ Each customization stage is tagged following `besafebank` Prefix. Below are deta
   - Implement a Local Switcher menu on header
   - Set new favicon and title on Tab bar
 
-### [`besafebank-2.0.1`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-2.0.1)).
+### [`besafebank-2.0.1`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-2.0.1]).
 **Overview**: Landing page (Final version)
 - **Changes**:
   - Change title on Hero section from BSB to BeSafe
 
-### [`besafebank-3.0.1`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-3.0.1)).
+### [`besafebank-3.0.1`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-3.0.1]).
 **Overview**: Create a new page (Products）
 - **Changes**:
   - Create a new page with default design (Header and Dashboard included)
   - Set new router inside `example/src/App.js`
   - Add new page Link on Dashboard
 
-### [`besafebank-4.0.1`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-4.0.1)).
+### [`besafebank-4.0.1`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-4.0.1]).
 **Overview**: Authentication pages (Login, Signup, and Reset-Password)
 - **Changes**:
   - Change main logo on Header
   - Delete multiple login options
   - Delete side content
 
-### [`besafebank-5.0.1`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-5.0.1)).
+### [`besafebank-5.0.1`]([https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-5.0.1]).
 **Overview**: Home page (Final version)
 - **Changes**:
   - Delete Markdown text function
