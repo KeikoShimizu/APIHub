@@ -523,7 +523,8 @@ export const ApiHubLayout = ({
     Edit button component: `layer7-apihub/src/homepage/HomePageButton.js`
     Markdown edit component: ``
 
-### All contents of "home" page are inside `layer7-apihub/src/homepage/HomePageContent.js`.
+### Contents of Home page
+- All contents of "home" page are inside `layer7-apihub/src/homepage/HomePageContent.js`
 
    
 
