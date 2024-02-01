@@ -227,18 +227,18 @@ BeSafe Bank app demonstrates the customization of the Example app. For setting u
 Also if you want to see the progress of development compare each step by installing source code from [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).   
 
 >## Table of Contents:
-> #### Landing page
+> #### [Landing page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password)
 >  - Create a new blank page without default <Layout> design (Header and Dashboard not include)
 >  - Implement Local Switcher menu on Header
 >  - Set new localized texts inside i18n (English, French, and Spanish)
 >  - Set new favicon and title on app Tab bar
 >
-> #### Authentication page (Login, Signup, and Reset-Password)
+> #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password)
 >  - Change main logo on header
 >  - Customize multiple login option
 >  - Customize side content
 >
-> #### Create new page (Products page)
+> #### [Create new page (Products page)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
 >  - Create a new page with default <Layout> design (Header and Dashboard included)
 >  - Set new router
 >  - Add new page Link on Dashboard
