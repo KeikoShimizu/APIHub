@@ -405,14 +405,24 @@ If you want to use or modify multiple sign-in option which is used in the origin
 
 
 ## Create new page (Product page)
+- Create a new page with default design (Used React-admin [<Layout>](https://marmelab.com/react-admin/Layout.html#alternative-layouts)). This time, we implement `product` page with React-admin's `<Layout/>` styling. so no need to pass a props `noLayout`.
+```js
+        <ApiHubAdmin
+            customRoutes={[
+                <Route path="/products" component={Products} />, // New page called "products". Set router here
+                <Route path="/landingpage" component={LandingPage} noLayout />, // Landing page router
+                <Route path="/test" component={TestPage} />,
+            ]}
+        />
+  ```
 
 
 
-## Add new navigation option on Dashboard
+## Add new page Link on Dashboard
 
-Navigation items are in `layer7-apihub/src/ApiHubMenu.js`. 
+- Navigation is in `layer7-apihub/src/ApiHubMenu.js`. 
 
-This `ApiHubMenu` component is passed as a props to create menu on `<Layout>` of React-admin's layout in `layer7-apihub/src/ApiHubLayout.js`. 
+This `ApiHubMenu` component is passed as a props to create menu on [<Layout>](https://marmelab.com/react-admin/Layout.html#alternative-layouts) of React-admin's layout in `layer7-apihub/src/ApiHubLayout.js`. 
 ```js
 //in layer7-apihub/src/ApiHubLayout.js
 import { Layout } from 'react-admin';
@@ -428,12 +438,12 @@ export const ApiHubLayout = ({
     return <Layout appBar={appBar} menu={menu} {...rest} />;
 };
 ```
-Document about React-admin `<Layout>`: https://marmelab.com/react-admin/Layout.html
+- Document about React-admin `<Layout>`: https://marmelab.com/react-admin/Layout.html
 
 
 **Follow these steps:**
-***Create new navigation option***
-Implement new `<MenuItemLink>` and set address of router, icon, and primary text using with `translate()`.
+***Create new page Link on Dashboard***
+- Implement new `<MenuItemLink>` and set address of router, icon, and primary text using with `translate()`.
 ```js
 //in layer7-apihub/src/ApiHubMenu.js
 <MenuItemLink
@@ -448,9 +458,9 @@ Implement new `<MenuItemLink>` and set address of router, icon, and primary text
                 sidebarIsOpen={open}
             />
 ```
-Document about `<MenuItemLink>`: https://marmelab.com/react-admin/Buttons.html#menuitemlink
+- Document about `<MenuItemLink>`: https://marmelab.com/react-admin/Buttons.html#menuitemlink
 
-Material Icons : https://mui.com/material-ui/material-icons/
+- Material Icons : https://mui.com/material-ui/material-icons/
 
 
 
@@ -458,7 +468,10 @@ Material Icons : https://mui.com/material-ui/material-icons/
 
 1.Markdown text function
 
-If you want to use or modify Markdown text function which is used in the original example app, modify `layer7-apihub/src/homepage` folder.
+- If you want to use or modify Markdown text function which is used in the original example app, modify `layer7-apihub/src/homepage` folder.
+
+    Edit button component: `layer7-apihub/src/homepage/HomePageButton.js`
+    Markdown edit component: ``
 
 2. All the contents of "home" page is inside `layer7-apihub/src/homepage/HomePageContent.js`.
    
