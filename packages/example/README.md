@@ -222,7 +222,9 @@ You can now access the custom route at URL `/#/contact-us`.
 
 
 # BeSafe Bank App
-BeSafe Bank app demonstrates the customization of the Example app. View how to set up local environment on . Clone from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. Also if you want to see the progress of development compare each step by installing source code from [Tag List](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
+BeSafe Bank app demonstrates the customization of the Example app. For setting up local environment, see [Quick Start](https://github.com/KeikoShimizu/APIHub-example/blob/master/README.md#quick-start) on APIHub README.md. Once local environment is ready, clone Besafe Bank source code from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. 
+
+Also if you want to see the progress of development compare each step by installing source code from [Tag List](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
 
 >## Table of Contents:
 > **Landing page**
