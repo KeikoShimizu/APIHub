@@ -227,24 +227,24 @@ BeSafe Bank app demonstrates the customization of the Example app. For setting u
 Also if you want to see the progress of development compare each step by installing source code from [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).   
 
 >## Table of Contents:
-> #### [Landing page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password)
+> #### [Landing page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#landing-page-1)
 >  - [Create a new blank page without default <Layout> design (Header and Dashboard not include)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-blank-page-without-default-design-header-and-dashboard-not-included)
 >  - [Implement Local Switcher menu on Header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#implement-local-switcher-menu-on-header)
 >  - [Set new localized texts inside i18n (English, French, and Spanish)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-localized-texts-inside-i18n-english-french-and-spanish)
 >  - [Set new favicon and title on app Tab bar](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
 >
 > #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password)
->  - [Change main logo on header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
->  - [Customize multiple login option](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
+>  - [Change main logo on header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#change-main-logo-oh-header)
+>  - [Customize multiple login option](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#customize-multiple-sign-in-potion)
 >  - [Customize side content](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#customize-side-content)
 >
 > #### [Create new page (Products page)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
->  - [Create a new page with default <Layout> design (Header and Dashboard included)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#add-new-page-link-on-dashboard)
+>  - [Create a new page with default <Layout> design (Header and Dashboard included)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
 >  - [Add new page Link on Dashboard](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#add-new-page-link-on-dashboard)
 >
 > #### [Home page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#home-page)
 >  - [Customize Markdown text function](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#markdown-text-function)
->  - [Create contents of homepage]() 
+>  - [Create contents of homepage](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#contents-of-home-page) 
 
 
 
