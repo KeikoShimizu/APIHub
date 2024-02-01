@@ -252,9 +252,9 @@ Also if you want to see the progress of development compare each step by install
     
 ## Landing page
 
-**1.Create a new blank page without default design (Header and Dashboard not included)**
+### Create a new blank page without default design (Header and Dashboard not included)
 
-1) Create new a folder called `landingpage` inside `example/src`.
+#### Create new a folder called `landingpage` inside `example/src`.
 
 - Each child components are imported inside of `Landingpage.js` then export from `index.js`.
 
@@ -268,7 +268,7 @@ Also if you want to see the progress of development compare each step by install
         |   |   |-- LandingPageMain.js/
 
 
-2) Create a new blank page without default design (Header and Dashboard are not included)
+#### Create a new blank page without default design (Header and Dashboard are not included)
     
 - Set new router inside `example/src/App.js`. Set new `<Route />` inside of `customRoutes` props.
 - Pass props `noLayout` in `Route` for creating a blank page. For more information, visit `CustomRoutes` documentation on [Material UI noLayout](https://marmelab.com/react-admin/CustomRoutes.html#nolayout)
@@ -299,7 +299,7 @@ export default App;
 You can now access the custom route at URL `/#/landingpage`.
 
  
-**2. Implement Local Switcher menu on Header**
+### Implement Local Switcher menu on Header
 
 - Import the `ApiHubLanguageSwitcher` component from `layer7-apihub/src/ApiHubLanguageSwitcher.js` in the file you want to implement.
 
@@ -310,7 +310,7 @@ import { ApiHubLanguageSwitcher } from 'layer7-apihub';
 ```
 
 
-**3. Set new localized texts inside i18n (English, French, and Spanish)**
+### Set new localized texts inside i18n (English, French, and Spanish)
 - Create the language objects for the Landing page inside of `layer7-apihub/src/i18n`. Currently in BeSafe Bank app, we have 3 language options English, French and Spanish. 
 
         layer7-apihub/
@@ -398,7 +398,7 @@ export const LandingPageMain = () => {
    - For more information about Language Support, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
 
 
-**4. Set new favicon and title on Tab bar**
+### Set new favicon and title on Tab bar
    - Store the favicon image inside `example/public` folder.
    - If you modify favicon's file name, access `link` tag in the `header` of file `example/public/index.html`.
      
@@ -421,7 +421,7 @@ export const LandingPageMain = () => {
 
 ## Authentication page (Login, Signup, and Reset-Password)
 
-**Change main logo oh Header**
+### Change main logo oh Header
 
 - Store a new Logo image inside `example/public` folder.
 - Modify the Logo image path inside `BrandLogo.js`. Once you change the path, all the Logo on the `Authentication` pages and `Header` will change (Except Landing page).
@@ -434,11 +434,11 @@ export const LandingPageMain = () => {
     };
 ```
 
-**Customize Multiple Sign-in potion**
+### Customize Multiple Sign-in potion
 
 - We had multiple sign-in options in the original Example app. If you want to use or modify the multiple sign-in options which are used in the original Example app, access `file path` and implement in `file path`.
 
-**Customize Side content**
+### Customize Side content
 
 - We had an image on the side of Authentication section in the original Example app. If you want to implement new content as side content in all authentication pages, create new `SideContent.js` file in `example/src/authentication`. Then import `<SideContent />` component inside `example/src/authentication/ThemedAuthenticationLayout.js`.
   
@@ -490,7 +490,7 @@ export const ApiHubLayout = ({
 - Document about React-admin `<Layout>`: https://marmelab.com/react-admin/Layout.html
 
 
-**Create new page Link on Dashboard**
+### Create new page Link on Dashboard
 - Add new `<MenuItemLink>`, set the router path, icon, and set primary text by using `translate()`.
   
 ```js
@@ -517,14 +517,14 @@ export const ApiHubLayout = ({
 
 ## Home page
 
-1. Markdown text function
+### Markdown text function
 
 - If you want to use or modify Markdown text function which is used in the original example app, modify `layer7-apihub/src/homepage` folder.
 
     Edit button component: `layer7-apihub/src/homepage/HomePageButton.js`
     Markdown edit component: ``
 
-2. All contents of "home" page are inside `layer7-apihub/src/homepage/HomePageContent.js`.
+### All contents of "home" page are inside `layer7-apihub/src/homepage/HomePageContent.js`.
 
    
 
