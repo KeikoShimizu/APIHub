@@ -231,7 +231,7 @@ The BeSafe Bank app demonstrates the customization of Example app. Clone from `m
 >  - Set new contents inside i18n (English, French, and Spanish)
 >  - Set new fabicon and title on Tab bar
 >
-> **Authentication page (Login, Signin, and Reset-Password)**
+> **Authentication page (Login, Signup, and Reset-Password)**
 >  - Change main logo on header
 >  - Customize login option
 >  - Customize side content
@@ -395,7 +395,7 @@ export const LandingPageMain = () => {
    - For set title, refer [Change the Page Title](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#change-the-page-title) on Example App.
 
 
-## Authentication page (Login, Signin, and Reset-Password)
+## Authentication page (Login, Signup, and Reset-Password)
 
 **Multiple sign-in potion**
 
@@ -493,7 +493,7 @@ Each customization stage is tagged following beafebank Prefix. Below are details
   - Add new page Link on Dashboard
 
 ### [`besafebank-4.0.1`]([../layer7-apihub/README.md](https://github.com/KeikoShimizu/APIHub-example/releases/tag/besafebank-4.0.1)).
-**Overview**: Authentication pages (Login, Signin, and Reset-Password)
+**Overview**: Authentication pages (Login, Signup, and Reset-Password)
 - **Changes**:
   - Change main logo oh Header
   - Delete multiple login option
