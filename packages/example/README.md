@@ -435,7 +435,7 @@ export const LandingPageMain = () => {
 
 ### Customize Multiple Sign-in potion
 
-- We had multiple sign-in options in the original Example app. If you want to use or modify the multiple sign-in options which are used in the original Example app, access `file path` and implement in `file path`.
+- We had multiple sign-in options in the original Example app. If you want to use or modify the multiple sign-in options which are used in the original Example app, refer `layer7-apihub/src/authentication/Login/AuthSchemeList.js` and implement in `layer7-apihub/src/authentication/Login/LoginForm.js`.
 
 ### Customize Side content
 
