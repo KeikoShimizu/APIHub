@@ -524,7 +524,7 @@ export const ApiHubLayout = ({
   
     **Markdown Content Editor**:   `HomePageContentEditor` component inside `layer7-apihub/src/homepage/HomePageContent.js` file.
 
-  (To review this source code, download the source code below besafebank-4.0.1. from the [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).)
+  (To review this source code, download the source code below version `besafebank-4.0.1` from the [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).)
 
 ### Contents of Home page
 - All contents of "home" page are inside `layer7-apihub/src/homepage/HomePageContent.js`
