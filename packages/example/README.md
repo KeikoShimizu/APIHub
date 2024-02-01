@@ -404,12 +404,7 @@ If you want to use or modify multiple sign-in option which is used in the origin
 
 
 
-
-
-
-
-
-
+## Create new page (Product page)
 
 
 
