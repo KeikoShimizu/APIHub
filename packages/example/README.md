@@ -222,7 +222,7 @@ You can now access the custom route at URL `/#/contact-us`.
 
 
 # BeSafe Bank App
-BeSafe Bank app demonstrates the customization of the Example app. Clone from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. Also if you want to see the progress of development compare each step by installing source code from [Tag List](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
+BeSafe Bank app demonstrates the customization of the Example app. View how to set up local environment on . Clone from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example/tree/master) repository to review Customized code. Also if you want to see the progress of development compare each step by installing source code from [Tag List](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#tag).   
 
 >## Table of Contents:
 > **Landing page**
@@ -293,6 +293,8 @@ const App = () => {
 
 export default App;
 ```
+
+You can now access the custom route at URL `/#/landingpage`.
 
  
 **2. Implement Local Switcher menu on Header**
@@ -458,7 +460,7 @@ export const LandingPageMain = () => {
         />
   ```
 
-
+You can now access the custom route at URL `/#/products`.
 
 
 ## Add new page Link on Dashboard
