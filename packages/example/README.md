@@ -520,11 +520,11 @@ export const ApiHubLayout = ({
 
 - If you want to use or modify Markdown text function which is used in the original example app, modify `layer7-apihub/src/homepage` folder.
 
-    **Edit Button**: `HomePageEditButton` component inside `layer7-apihub/src/homepage/HomePageButton.js` file.
+    **Edit Button**:   `HomePageEditButton` component inside `layer7-apihub/src/homepage/HomePageButton.js` file.
   
-    **Markdown Content Editor**: `HomePageContentEditor` component inside `layer7-apihub/src/homepage/HomePageContent.js` file.
+    **Markdown Content Editor**:   `HomePageContentEditor` component inside `layer7-apihub/src/homepage/HomePageContent.js` file.
 
-  (To review this source code, download the source code　below besafebank-4.0.1. from the [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).)
+  (To review this source code, download the source code below besafebank-4.0.1. from the [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).)
 
 ### Contents of Home page
 - All contents of "home" page are inside `layer7-apihub/src/homepage/HomePageContent.js`
