@@ -262,9 +262,10 @@ The BeSafe Bank app demonstrates the customization of Example app. Clone from `m
         |   |   |-- LandingPageHeader.js/
         |   |   |-- LandingPageMain.js/
 
-3) Create a new blank page without default design (Header and Dashboard is not included)
+
+2) Create a new blank page without default design (Header and Dashboard is not included)
     
-- Set new router inside `example/src/App.js`.
+- Set new router inside `example/src/App.js`. Set new `<Route />` inside of `customRoutes` props.
 - Pass props `noLayout` in `Route` for creating blank page. For more information, visit `CustomRoutes` documentation on [Material UI noLayout](https://marmelab.com/react-admin/CustomRoutes.html#nolayout)
 
 ```js
@@ -278,9 +279,12 @@ import { LandingPage } from '../src/landingPage'; // Import the Landing page com
 const App = () => {
     return (
         <ApiHubAdmin
-            customRoutes={[<Route path="/landingpage" component={LandingPage} noLayout />, //noLayout (Set "noLayout" for create a blank page.)
+            customRoutes={[
+                <Route path="/landingpage" component={LandingPage} noLayout />, //noLayout (Set "noLayout" for create a blank page.)
+                <Route path="/test" component={TestPage} />,
             ]}
         />
+
     );
 }
 
@@ -294,9 +298,19 @@ import { ApiHubLanguageSwitcher } from 'layer7-apihub';
 ```
 
 **3. Set new contents inside i18n (English, French, and Spanish)**
-- Modify the language objects inside of folder `layer7-apihub/src/i18n`. Currently in BeSafe Bank app, we have 3 language options English, French and Spanish. 
+- Modify the language objects inside of `layer7-apihub/src/i18n`. Currently in BeSafe Bank app, we have 3 language options English, French and Spanish. 
+
+        layer7-apihub/
+        |-- src/
+        |   |-- i18n/
+        |   |   |-- LocaleSwitcherMenu.js/
+        |   |   |-- en.js/ // English
+        |   |   |-- es.js/ // Spanish
+        |   |   |-- fr.js/ // French
+        ......
   
-This is the object for English option. Modify another selection for French `fr.js`and Spanish `es.js`
+This is the object for English option in `en.js`. Each language file has same key and different properties displayed in different languages. 
+Once you add new language object in `en.js`, cope the object keys then paste in `fr.js` and `es.js`.
 ```js
 //in layer7-apihub/src/i18n/en.js
 // Landingpage / Here is the Object for language selection.
