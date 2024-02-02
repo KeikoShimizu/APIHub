@@ -21,7 +21,7 @@ export const changeTheme = newTheme => ({
 
 const darkPalette = createPalette({
     primary: {
-        main: '#90caf9',
+        main: '#006837',
         contrastText: '#ffffff',
     },
     secondary: {
