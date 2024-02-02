@@ -473,6 +473,10 @@ const apiHubMessages = {
             confirm_delete_document_with_children:
                 "Si sta per procedere all'eliminazione del documento e dei documenti figlio. Procedere?",
         },
+        products: {
+            name: 'Prodotti',
+            contents: 'Questa è una nuova pagina.',
+        },
         registrations: {
             title: 'Crea Nuovo account',
             fields: {

@@ -560,6 +560,10 @@ const apiHubMessages = {
             confirm_delete_document_with_children:
                 'Vous êtes sur le point de supprimer ce document et ses documents enfants. Voulez-vous continuer ?',
         },
+        products: {
+            name: 'Des produits',
+            contents: "C'est une nouvelle page",
+        },
         registrations: {
             title: 'Créer un compte',
             fields: {
