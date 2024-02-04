@@ -420,7 +420,7 @@ const apiHubMessages = {
                 "Annullamento della distribuzione delle chiavi ed eliminazione dell'applicazione. Questo potrebbe richiedere vari minuti.",
         },
         documents: {
-            name: 'Wiki |||| Wiki',
+            name: 'Novità su BeSafe |||| Novità su BeSafe',
             fields: {
                 title: 'Titolo',
                 navtitle: 'URI',
@@ -472,6 +472,10 @@ const apiHubMessages = {
                 "Si sta per procedere all'eliminazione del documento. Procedere?",
             confirm_delete_document_with_children:
                 "Si sta per procedere all'eliminazione del documento e dei documenti figlio. Procedere?",
+        },
+        products: {
+            name: 'Prodotti',
+            contents: 'Questa è una nuova pagina.',
         },
         registrations: {
             title: 'Crea Nuovo account',
