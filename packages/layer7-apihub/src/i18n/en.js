@@ -550,7 +550,8 @@ const apiHubMessages = {
                 'You are about to delete this document and its child documents. Are you sure?',
         },
         products: {
-            name: 'Products |||| Products',
+            name: 'Products',
+            contents: 'This is a new page.',
         },
         registrations: {
             title: 'Create a New Account',
