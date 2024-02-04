@@ -420,7 +420,7 @@ const apiHubMessages = {
                 "Annullamento della distribuzione delle chiavi ed eliminazione dell'applicazione. Questo potrebbe richiedere vari minuti.",
         },
         documents: {
-            name: 'Wiki |||| Wiki',
+            name: 'Novità su BeSafe |||| Novità su BeSafe',
             fields: {
                 title: 'Titolo',
                 navtitle: 'URI',

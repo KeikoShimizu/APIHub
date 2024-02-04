@@ -503,7 +503,7 @@ const apiHubMessages = {
             },
         },
         documents: {
-            name: 'Wiki |||| Wiki',
+            name: 'Actualités BeSafe |||| Actualités BeSafe',
             fields: {
                 title: 'Titre',
                 navtitle: 'URI',
