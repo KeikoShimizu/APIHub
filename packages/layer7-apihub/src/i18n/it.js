@@ -483,7 +483,8 @@ const apiHubMessages = {
                 "Si sta per procedere all'eliminazione del documento e dei documenti figlio. Procedere?",
         },
         products: {
-            name: 'Prodotti |||| Prodotti',
+            name: 'Prodotti',
+            contents: 'Questa è una nuova pagina.',
         },
         registrations: {
             title: 'Crea Nuovo account',

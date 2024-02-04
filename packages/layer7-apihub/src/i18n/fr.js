@@ -570,7 +570,8 @@ const apiHubMessages = {
                 'Vous êtes sur le point de supprimer ce document et ses documents enfants. Voulez-vous continuer ?',
         },
         products: {
-            name: 'Des produits |||| Des produits',
+            name: 'Des produits',
+            contents: "c'est une nouvelle page",
         },
         registrations: {
             title: 'Créer un compte',
