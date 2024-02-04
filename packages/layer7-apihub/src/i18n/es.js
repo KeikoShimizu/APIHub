@@ -577,7 +577,8 @@ const apiHubMessages = {
                 'Está a punto de suprimir este documento y sus documentos secundarios. ¿Está seguro?',
         },
         products: {
-            name: 'Productos |||| Productos',
+            name: 'Productos',
+            contents: 'Esta es una pagina nueva.',
         },
         registrations: {
             title: 'Crear una nueva cuenta',

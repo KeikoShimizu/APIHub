@@ -215,7 +215,6 @@ const useApplicationListActionsStyles = makeStyles(theme => ({
         marginLeft: theme.spacing(),
     },
     createButton: {
-        paddingRight: theme.spacing(2),
         marginRight: theme.spacing(2),
     },
 }));
