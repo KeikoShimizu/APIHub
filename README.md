@@ -57,6 +57,12 @@ Prerequisites and Folder structure are listed on
 
 ### Setup the Local Environment
 
+**Prerequisites:**
+
+- You have installed [Yarn](https://yarnpkg.com/).
+- You have installed GNU Make 3.81 or later.
+- You have installed Node v12.16.3.
+
 To run the project locally on Mac OS, follow the steps below:
 
 **1. Clone the APIHub repository:**
@@ -143,15 +149,6 @@ The build process for the “make” command is defined in a Makefile located at
 
 
 ## Quick Start
-
-Use the following commands to set up you local development environment.
-
-**Prerequisites:**
-
-Before setting up your local development environment, ensure that you have completed the following:
-- You have installed [Yarn](https://yarnpkg.com/).
-- You have installed GNU Make 3.81 or later.
-- You have installed Node v12.16.3.
 
 ### Install the JavaScript Dependencies
 
