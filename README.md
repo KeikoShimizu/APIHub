@@ -179,8 +179,17 @@ The build process for the `$ make` command is defined in a `Makefile` located at
 
 ```js
 
-in/ .Makefile
-start : `copy-config-example` & `build`  (Makefile)
+// in .Makefile
+#### Build ####
+
+build: ## Build the library
+	@yarn build
+
+build-example: ## Build the example
+	@yarn build-example
+
+build-healthcare: ## Build the healthcare
+	@yarn build-healthcare
 ```
 
 - `package/example/config/config-${DEPLOY_ENV}.js` is copied to `packages/example/public/config.js` to placed necessary files.
