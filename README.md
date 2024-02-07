@@ -23,7 +23,7 @@ The Example app has the same source code as the standard API Hub. [The Example a
 - [Host the Example app on another domain](./packages/example/README.md##host-the-example-app-on-another-domain)
 - [Auto-detect the API Hub URL](./packages/example/README.md##auto-detect-the-api-hub-url)
 - [Customization Tutorials](./packages/example/README.md##customization-tutorials)
-- [BeSafe Bank App](./packages/example/README.md##besafe-bank-app)
+- [BeSafe Bank App](./packages/example/README.md#besafe-bank-app)
 
 ### Healthcare App
 
