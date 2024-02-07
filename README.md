@@ -73,7 +73,9 @@ To run the project locally on Mac OS, follow the steps below:
   $ git clone https://github.com/CAAPIM/APIHub.git
   ```
 
-**2. Install Node Version Manager (NVM) on your machine to manage the Node JS version you want to run.**
+**2. Install Node Version Manager (NVM)**
+
+Install NVM on your machine to manage the Node JS version you want to run.
 
 - Check if NVM is in your environment.
 
@@ -85,9 +87,9 @@ To run the project locally on Mac OS, follow the steps below:
   ```sh
   $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
   ```
-- Close and reopen Terminal to check if NVM is correnctly installed.
+- Close and re-open Terminal to check if NVM is correnctly installed.
 
-[NVM document & Troubleshooting](https://github.com/nvm-sh/nvm/blob/master/README.md) 
+See the detail of NVM [NVM document & Troubleshooting](https://github.com/nvm-sh/nvm/blob/master/README.md) 
 
 **3. Start collect Node version**
 
@@ -112,18 +114,18 @@ If the version of Node isn’t installed yet on your machine, follow the suggest
    1. Check `APIHub/.nvmrc` file what Node version required to install.
    2. Install required Node version following command. (Node version v12.16.3)
 
-    ```sh
-    $ nvm install v12.16.3
-    ```
+  ```sh
+  $ nvm install v12.16.3
+  ```
   3. Check current Node version are same version as on the `.nvmrc` file.
      
-    ```sh
-    $ node -v
-    ```
+  ```sh
+  $ node -v
+  ```
 
-**4. Install yarn globally:**
+**4. Install yarn globally**
 
-Yarn is used as a package manager to effectively manage dependencies, install packages, build, etc in this projects.
+Yarn is used as a package manager to effectively manage dependencies, install packages, build, etc in this project.
 
 ```sh
 $ npm install --global yarn
@@ -134,7 +136,7 @@ $ npm install --global yarn
 GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. Make gets its knowledge of how to build your program from a file called the `Makefile`, which lists each of the non-source files and how to compute it from other files. `Makefile` is located on the root directory.
 This allows you to build and install the project using `$make` command.
 
-[GNU operating system document](https://www.gnu.org/software/make/)
+See the detail of GNU [GNU operating system document](https://www.gnu.org/software/make/)
 
 - Check if GNU in installled on your local eovironment.
 ```sh
@@ -142,11 +144,8 @@ $ make -v
 ```
 - Install GNU
 
+**Make command**
 
-**6. Install Dependencies of the project**
-```sh
-$ make install
-```
 The build process for the `make` command is defined in a `Makefile` located at the root of the repository.
 
  
@@ -154,11 +153,12 @@ The build process for the `make` command is defined in a `Makefile` located at t
 
 ### Install the JavaScript Dependencies
 
-Install the JavaScript dependencies by issuing the following command:
+Install the JavaScript dependencies. This can create `mode_module`　for every project in this Monopro by issuing the following command. 
 
 ```sh
 make install
 ```
+
 ### Start an App
 
 Start the Example app or the Healthcare app in watch mode.
