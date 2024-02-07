@@ -225,13 +225,13 @@ make build-example
 DEPLOY_ENV=prod make copy-deploy-config-example
 ```
 
-`$ make build` 
+- `$ make build` 
 This command executes to build `layer7-apihub` then `ayer7-apihub-mock`. layer7-apihub-mock is build only when `layer7-apihub` success to build.
 
-`$ make build-example` 
+- `$ make build-example` 
 This command executes to build `example`.
 
-`DEPLOY_ENV=prod make copy-deploy-config-example`
+- `DEPLOY_ENV=prod make copy-deploy-config-example`
 It is necessary to configure config-prod.js file inside of example>config before running this command.
 Instruction on [how to define a configuration](https://github.com/CAAPIM/APIHub/blob/master/packages/example/README.md#define-a-configuration-for-a-new-environment)
 
