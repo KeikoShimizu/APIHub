@@ -177,7 +177,11 @@ make start-healthcare
 
 The build process for the `$ make` command is defined in a `Makefile` located at the root of the repository.
 
+```js
+
+in/ .Makefile
 start : `copy-config-example` & `build`  (Makefile)
+```
 
 - `package/example/config/config-${DEPLOY_ENV}.js` is copied to `packages/example/public/config.js` to placed necessary files.
   
@@ -217,7 +221,7 @@ make test-e2e-local
 
 ## Deploy the Example App
 
-To deploy example app, Firstly build the `API Hub library`, the `Example app`, and then copy the production configuration by issuing the following commands. 
+To deploy example app, Firstly build the API Hub library (`layer7-apihub` & `ayer7-apihub-mock`), the `Example app`, and then copy the production configuration by issuing the following commands. 
 
 ```sh
 make build
@@ -226,7 +230,7 @@ DEPLOY_ENV=prod make copy-deploy-config-example
 ```
 
 - `$ make build` 
-This command executes to build `layer7-apihub` then `ayer7-apihub-mock`. layer7-apihub-mock is build only when `layer7-apihub` success to build.
+This command executes to build `layer7-apihub` then `ayer7-apihub-mock`. `layer7-apihub-mock` is build only when `layer7-apihub` success to build.
 
 - `$ make build-example` 
 This command executes to build `example`.
