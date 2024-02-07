@@ -59,9 +59,9 @@ Prerequisites and Folder structure are listed on
 
 **Prerequisites:**
 
-- You have installed [Yarn](https://yarnpkg.com/).
-- You have installed GNU Make 3.81 or later.
-- You have installed Node v12.16.3.
+- [Yarn](https://yarnpkg.com/).
+- GNU Make 3.81 or later.
+- Node v12.16.3.
 
 To run the project locally on Mac OS, follow the steps below:
 
