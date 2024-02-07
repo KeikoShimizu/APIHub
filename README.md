@@ -48,6 +48,114 @@ The end-to-end (E2E) tests are for the Example app.
 
 For more information about this testing, see [the Cypress - End-To-End Testing README](./cypress/README.md).
 
+## Getting Start with API Hub 
+
+This topic is intended lead you to set local development environment to run the Layer7 API Hub app (Example, Healthcare and BeSafe Bank). Follow the istruction before start:
+
+Prerequisites and Folder structure are listed on (Layer7 API Developer Portal - 5.2)[https://techdocs.broadcom.com/us/en/ca-enterprise-software/layer7-api-management/api-developer-portal/5-2/api-hub/getting-started-with-api-hub.html].
+
+### Setup the Local Environment
+
+To run the project locally on Mac OS, follow the steps below:
+
+1. Clone the APIHub repository:
+
+This repository contain multiple projects as Monorepo. Clone Monorepo to access whole projects. 
+
+```sh
+$ git clone https://github.com/CAAPIM/APIHub.git
+```
+
+2. Install Node Version Manager (NVM) on your machine to manage the Node JS version you want to run.
+
+- Check if NVM is in your environment.
+
+  ```sh
+  $ nvm -v   or $nvm --version
+  ```
+- If not installed, run the following command:
+
+```sh
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+```
+- Close and reopen Terminal to Check if NVM is correnctly installed.
+
+NVM document & Troubleshooting: https://github.com/nvm-sh/nvm/blob/master/README.md 
+
+3. In the command line, navigate into the project /APIHub and run the following command to start using the correct node version:
+
+```sh
+$ nvm use
+```
+
+This is the way to use a specific Node.js version in conjunction with a `.nvmrc` file, which activates the Node.js version specified in the `.nvmrc` file.  This `$ nvm use` command need to run on the root directory.
+
+The required Node version for this project is defined inside of `APIHub/.nvmrc` folder. 
+
+- Check current Node version are navigated with same version as on the .nvmrc file.
+
+```sh
+$ node -v
+```
+
+If the version of Node isn’t installed yet on your machine, follow the suggested command prompts to install that specific version. 
+
+   1. Check APIHub/.nvmrc file what Node version required to install.
+   2. Install required Node version following command. (Node version v12.16.3)
+
+```sh
+$ nvm install v12.16.3
+```
+  3. Check current Node version are same version as on the .nvmrc file.
+```sh
+$ node -v
+```
+
+4. Install yarn globally:
+Yarn is used as a package manager to effectively manage dependencies, install packages, build, etc in this projects.
+
+```sh
+$ npm install --global yarn
+```
+
+5. Install GNU
+
+GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. Make gets its knowledge of how to build your program from a file called the `Makefile`, which lists each of the non-source files and how to compute it from other files. `Makefile` is located on the root directory.
+This allows you to build and install the project using `$make` command.
+
+(GNU operating system document)[https://www.gnu.org/software/make/]
+
+- Check if GNU in installled on your local eovironment.
+```sh
+$ make -v
+```
+- Install GNU
+
+
+
+6. Install Dependencies of the project
+```sh
+$ make install
+```
+The build process for the “make” command is defined in a Makefile located at the root of the repository.
+
+7. 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Quick Start
 
 Use the following commands to set up you local development environment.
@@ -81,6 +189,16 @@ To start the **Healthcare app**, issue the following command:
 ```sh
 make start-healthcare
 ```
+
+The build process for the `$ make` command is defined in a `Makefile` located at the root of the repository.
+
+start : `copy-config-example` & `build`  (Makefile)
+
+- `package/example/config/config-${DEPLOY_ENV}.js` is copied to `packages/example/public/config.js` to placed necessary files.
+  
+- build command is executed.
+  
+- `yarn start-example` command is executed using the yarn package manager then starts the project in development mode.
 
 ### Run the Tests
 
