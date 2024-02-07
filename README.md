@@ -50,23 +50,24 @@ For more information about this testing, see [the Cypress - End-To-End Testing R
 
 ## Getting Start with API Hub 
 
-This topic is intended lead you to set local development environment to run the Layer7 API Hub app (Example, Healthcare and BeSafe Bank). Follow the istruction before start:
+This topic is intended lead you to set local development environment to run the Layer7 API Hub app ( Example, Healthcare and BeSafe Bank ). Follow the istruction before start:
 
-Prerequisites and Folder structure are listed on (Layer7 API Developer Portal - 5.2)[https://techdocs.broadcom.com/us/en/ca-enterprise-software/layer7-api-management/api-developer-portal/5-2/api-hub/getting-started-with-api-hub.html].
+Prerequisites and Folder structure are listed on 
+(Layer7 API Developer Portal - 5.2)[https://techdocs.broadcom.com/us/en/ca-enterprise-software/layer7-api-management/api-developer-portal/5-2/api-hub/getting-started-with-api-hub.html]
 
 ### Setup the Local Environment
 
 To run the project locally on Mac OS, follow the steps below:
 
-1. Clone the APIHub repository:
+**1. Clone the APIHub repository:**
 
-This repository contain multiple projects as Monorepo. Clone Monorepo to access whole projects. 
+  This repository contain multiple projects as Monorepo. Clone Monorepo to access whole     projects. 
 
-```sh
-$ git clone https://github.com/CAAPIM/APIHub.git
-```
+  ```sh
+  $ git clone https://github.com/CAAPIM/APIHub.git
+  ```
 
-2. Install Node Version Manager (NVM) on your machine to manage the Node JS version you want to run.
+**2. Install Node Version Manager (NVM) on your machine to manage the Node JS version you want to run.**
 
 - Check if NVM is in your environment.
 
@@ -75,14 +76,14 @@ $ git clone https://github.com/CAAPIM/APIHub.git
   ```
 - If not installed, run the following command:
 
-```sh
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-```
+  ```sh
+  $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+  ```
 - Close and reopen Terminal to Check if NVM is correnctly installed.
 
 NVM document & Troubleshooting: https://github.com/nvm-sh/nvm/blob/master/README.md 
 
-3. In the command line, navigate into the project /APIHub and run the following command to start using the correct node version:
+**3. In the command line, navigate into the project /APIHub and run the following command to start using the correct node version:**
 
 ```sh
 $ nvm use
@@ -111,14 +112,14 @@ $ nvm install v12.16.3
 $ node -v
 ```
 
-4. Install yarn globally:
+**4. Install yarn globally:**
 Yarn is used as a package manager to effectively manage dependencies, install packages, build, etc in this projects.
 
 ```sh
 $ npm install --global yarn
 ```
 
-5. Install GNU
+**5. Install GNU**
 
 GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. Make gets its knowledge of how to build your program from a file called the `Makefile`, which lists each of the non-source files and how to compute it from other files. `Makefile` is located on the root directory.
 This allows you to build and install the project using `$make` command.
@@ -132,28 +133,13 @@ $ make -v
 - Install GNU
 
 
-
-6. Install Dependencies of the project
+**6. Install Dependencies of the project**
 ```sh
 $ make install
 ```
 The build process for the “make” command is defined in a Makefile located at the root of the repository.
 
-7. 
-
  
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Quick Start
