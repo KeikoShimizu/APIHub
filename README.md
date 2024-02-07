@@ -175,21 +175,18 @@ To start the **Healthcare app**, issue the following command:
 make start-healthcare
 ```
 
-The build process for the `$ make` command is defined in a `Makefile` located at the root of the repository.
+Take a look Run the “start” section in `Makefile` to see how this command works.
 
 ```js
 
 // in .Makefile
-#### Build ####
+#### Run ####
 
-build: ## Build the library
-	@yarn build
+start: copy-config-example build ## Starts the application in development mode
+	@yarn start-example
 
-build-example: ## Build the example
-	@yarn build-example
-
-build-healthcare: ## Build the healthcare
-	@yarn build-healthcare
+start-healthcare: copy-config-healthcare build ## Starts the application in development mode
+	@yarn start-healthcare
 ```
 
 - `package/example/config/config-${DEPLOY_ENV}.js` is copied to `packages/example/public/config.js` to placed necessary files.
@@ -249,20 +246,21 @@ It is necessary to configure config-prod.js file inside of example>config before
 Instruction on [how to define a configuration](https://github.com/CAAPIM/APIHub/blob/master/packages/example/README.md#define-a-configuration-for-a-new-environment)
 
 
+```js
+//in .Makefile
+#### Build ####
 
+build: ## Build the library
+	@yarn build
 
+build-example: ## Build the example
+	@yarn build-example
 
+build-healthcare: ## Build the healthcare
+	@yarn build-healthcare
+```
 
-
-
-
-
-
-
-
-
-
-Copy the contents of the `packages/example/build` directory to your favorite web hosting service. For example, the following command launches an nginx Docker container on your local machine:
+Once you success to build, copy the contents of the `packages/example/build` directory to your favorite web hosting service. For example, the following command launches an nginx Docker container on your local machine:
 
 ```sh
 docker run --name APIHub -v `pwd`/packages/example/build:/usr/share/nginx/html:ro -p 8888:80 nginx
