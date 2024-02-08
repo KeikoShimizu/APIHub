@@ -50,9 +50,9 @@ For more information about this testing, see [the Cypress - End-To-End Testing R
 
 ## Getting Start with API Hub 
 
-This topic is intended lead you to set local development environment to run the Layer7 API Hub app ( Example, Healthcare and BeSafe Bank ). Follow the istruction before start:
+This topic is intended lead you to set local development environment to run the Layer7 API Hub app ( Example[BeSafe Bank] and Healthcare ). Follow the istruction before start:
 
-Prerequisites and Folder structure are listed on 
+Prerequisites and folder structure are listed on 
 [Layer7 API Developer Portal - 5.2](https://techdocs.broadcom.com/us/en/ca-enterprise-software/layer7-api-management/api-developer-portal/5-2/api-hub/getting-started-with-api-hub.html)
 
 ### Setup the Local Environment
@@ -111,7 +111,7 @@ $ node -v
 
 If the version of Node isn’t installed yet on your machine, follow the suggested command prompts to install that specific version. 
 
-   1. Check `APIHub/.nvmrc` file what Node version required to install.
+   1. Check `APIHub/.nvmrc` file what Node version required to install. 
    2. Install required Node version following command. (Node version v12.16.3)
 
   ```sh
@@ -144,9 +144,11 @@ $ make -v
 ```
 - Install GNU
 
-**Make command**
+**Make command　& Makefile**
 
 The build process for the `make` command is defined in a `Makefile` located at the root of the repository.
+
+A `Makefile` is a file that defines scripts for automating build processes and tasks. It usually defines a set of common tasks or operations that occur within a project and provides rules for executing them from the command line. It is used in conjunction with the GNU Make build tool.
 
  
 ## Quick Start
