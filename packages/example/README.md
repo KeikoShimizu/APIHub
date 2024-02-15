@@ -222,13 +222,13 @@ You can now access the custom route at URL `/#/contact-us`.
 
 
 # BeSafe Bank App
-BeSafe Bank app demonstrates the customization of the Example app. For setting up local environment, see [Getting Start withAPI Hub](../../README.md#quick-start) on APIHub README.md. Once local environment is ready, clone Besafe Bank source code from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example) repository to review Customized code. 
+BeSafe Bank app demonstrates the customization of the Example app. For setting up local environment, see [Getting Start with API Hub](../../README.md#getting-start-with-api-hub) on APIHub README.md. Once local environment is ready, clone Besafe Bank source code from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example) repository to review Customized code. 
 
 Also if you want to see the progress of development compare each step by installing source code from [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).   
 
 >## Table of Contents:
 > #### [Landing page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#landing-page-1)
->  - [Create a new blank page without default <Layout> design (Header and Dashboard not include)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-blank-page-without-default-design-header-and-dashboard-not-included)
+>  - [Create a new blank page without default <Layout> design (Header and Dashboard not include)](#create-a-new-blank-page-without-default-design-header-and-dashboard-not-included)
 >  - [Implement Local Switcher menu on Header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#implement-local-switcher-menu-on-header)
 >  - [Set new localized texts inside i18n (English, French, and Spanish)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-localized-texts-inside-i18n-english-french-and-spanish)
 >  - [Set new favicon and title on app Tab bar](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
