@@ -234,7 +234,7 @@ Also if you want to see the progress of development compare each step by install
 >  - [Set a new favicon and title on app Tab bar](#set-new-favicon-and-title-on-tab-bar)
 >
 > #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password-1)
->  - [Change main logo on header](#change-main-logo-oh-header)
+>  - [Change main logo on header](#change-main-logo-on-header)
 >  - [Customize multiple Login option](#customize-multiple-login-option)
 >  - [Customize side content](#customize-side-content)
 >
