@@ -229,22 +229,22 @@ Also if you want to see the progress of development compare each step by install
 >## Table of Contents:
 > #### [Landing page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#landing-page-1)
 >  - [Create a new blank page without default <Layout> design (Header and Dashboard not include)](#create-a-new-blank-page-without-default-design-header-and-dashboard-not-included)
->  - [Implement Local Switcher menu on Header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#implement-local-switcher-menu-on-header)
->  - [Set new localized texts inside i18n (English, French, and Spanish)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-localized-texts-inside-i18n-english-french-and-spanish)
->  - [Set new favicon and title on app Tab bar](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#set-new-favicon-and-title-on-tab-bar)
+>  - [Implement Local Switcher menu on Header](#implement-local-switcher-menu-on-header)
+>  - [Set new localized texts inside i18n (English, French, and Spanish)](#set-new-localized-texts-inside-i18n-english-french-and-spanish)
+>  - [Set new favicon and title on app Tab bar](#set-new-favicon-and-title-on-tab-bar)
 >
 > #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password-1)
->  - [Change main logo on header](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#change-main-logo-oh-header)
->  - [Customize multiple login option](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#customize-multiple-sign-in-potion)
->  - [Customize side content](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#customize-side-content)
+>  - [Change main logo on header](#change-main-logo-oh-header)
+>  - [Customize multiple login option](#customize-multiple-sign-in-potion)
+>  - [Customize side content](#customize-side-content)
 >
 > #### [Create new page (Products page)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
->  - [Create a new page with default <Layout> design (Header and Dashboard included)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
->  - [Add new page Link on Dashboard](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#add-new-page-link-on-dashboard)
+>  - [Create a new page with default <Layout> design (Header and Dashboard included)](#create-a-new-page-products-page)
+>  - [Add new page Link on Dashboard](#add-new-page-link-on-dashboard)
 >
 > #### [Home page](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#home-page-1)
->  - [Customize Markdown text function](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#markdown-text-function)
->  - [Create contents of homepage](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#contents-of-home-page) 
+>  - [Customize Markdown text function](#markdown-text-function)
+>  - [Create contents of homepage](#contents-of-home-page) 
 
 
 
@@ -393,7 +393,7 @@ export const LandingPageMain = () => {
 };
 ```
 
-   - If you want to add new languages, refer to [Add Additional Language Support in the Layer7 API Hub Library](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/layer7-apihub/README.md#add-additional-language-support-in-the-layer7-api-hub-library). 
+   - If you want to add new languages, refer to [Add Additional Language Support in the Layer7 API Hub Library](../layer7-apihub/README.md#add-additional-language-support-in-the-layer7-api-hub-library). 
    - For more information about Language Support, visit documentation on [`React-admin i18n Provider and Translations`](https://marmelab.com/react-admin/Translation.html).  
 
 
@@ -413,7 +413,7 @@ export const LandingPageMain = () => {
         />
      ```
      
-   - For setting title, refer [Change the Page Title](https://github.com/KeikoShimizu/APIHub-example/tree/master/packages/example#change-the-page-title) on Example App.
+   - For setting title, refer [Change the Page Title](#change-the-page-title) on Example App.
 
 
 
@@ -524,7 +524,7 @@ export const ApiHubLayout = ({
   
     **Markdown Content Editor**:   `HomePageContentEditor` component inside `layer7-apihub/src/homepage/HomePageContent.js` file.
 
-  (To review this source code, download the source code below version `besafebank-4.0.1` from the [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).)
+  (To review this source code, download the source code below version `besafebank-4.0.1` from the [Tag List](#tag-list).)
 
 ### Contents of Home page
 - All contents of "home" page are inside `layer7-apihub/src/homepage/HomePageContent.js`
