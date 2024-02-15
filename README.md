@@ -143,8 +143,9 @@ See the detail of GNU [GNU operating system document](https://www.gnu.org/softwa
 $ make -v
 ```
 - Install GNU
+  
 | Windows(MSYS2) | Linux(Debian/Ubunty base distribution) | Linux(Red Hat/CentOS base distribution) | macOS(Homebrew) |
-| --- | --- | --- | --- |
+| ---------------| -------------------------------------- | --------------------------------------- | --------------- |
 | - Download MSYS2 and install.
 - Open MSYS2 MinGW 64-bit terminal
 - Install make with this command
