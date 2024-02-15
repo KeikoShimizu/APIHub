@@ -222,7 +222,7 @@ You can now access the custom route at URL `/#/contact-us`.
 
 
 # BeSafe Bank App
-BeSafe Bank app demonstrates the customization of the Example app. For setting up local environment, see [Getting Start with API Hub](../../README.md#getting-start-with-api-hub) on APIHub README.md. Once local environment is ready, clone Besafe Bank source code from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example) repository to review Customized code. 
+BeSafe Bank app demonstrates the customization of the Example app. For setting up the local environment, see [Getting Start with API Hub](../../README.md#getting-start-with-api-hub) on APIHub README.md. Once the local environment is ready, clone BeSafe Bank source code from `master` branch of [APIHub-example](https://github.com/KeikoShimizu/APIHub-example) repository to review the customized code. 
 
 Also if you want to see the progress of development compare each step by installing source code from [Tag List](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#tag-list).   
 
@@ -231,7 +231,7 @@ Also if you want to see the progress of development compare each step by install
 >  - [Create a new blank page without default <Layout> design (Header and Dashboard not include)](#create-a-new-blank-page-without-default-design-header-and-dashboard-not-included)
 >  - [Implement Local Switcher menu on Header](#implement-local-switcher-menu-on-header)
 >  - [Set new localized texts inside i18n (English, French, and Spanish)](#set-new-localized-texts-inside-i18n-english-french-and-spanish)
->  - [Set new favicon and title on app Tab bar](#set-new-favicon-and-title-on-tab-bar)
+>  - [Set a new favicon and title on app Tab bar](#set-new-favicon-and-title-on-tab-bar)
 >
 > #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password-1)
 >  - [Change main logo on header](#change-main-logo-oh-header)
@@ -323,7 +323,7 @@ import { ApiHubLanguageSwitcher } from 'layer7-apihub';
 
   
 This is the object for the English option in `en.js`. Each language file has the same key and different properties displayed in different languages. 
-After adding the new language object to "en.js", copy the object key you created for the landing page and paste it into "fr.js" and "es.js" and enter the respective language in the property.
+After adding the new language object to `en.js`, copy the object key you created for the landing page and paste it into `fr.js` and `es.js` and enter the respective language in the property.
 
 ```js
 //in layer7-apihub/src/i18n/en.js
