@@ -235,7 +235,7 @@ Also if you want to see the progress of development compare each step by install
 >
 > #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password-1)
 >  - [Change main logo on header](#change-main-logo-oh-header)
->  - [Customize multiple Login option](#customize-multiple-login-potion)
+>  - [Customize multiple Login option](#customize-multiple-login-option)
 >  - [Customize side content](#customize-side-content)
 >
 > #### [Create new page (Products page)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
