@@ -142,18 +142,14 @@ See the detail of GNU [GNU operating system document](https://www.gnu.org/softwa
 ```sh
 $ make -v
 ```
-- Install GNU
+- Installing GNU in deferent environment
   
-| Windows(MSYS2) | Linux(Debian/Ubunty base distribution) | Linux(Red Hat/CentOS base distribution) | macOS(Homebrew) |
-| ---------------| -------------------------------------- | --------------------------------------- | --------------- |
-| - Download MSYS2 and install.
-| - Open MSYS2 MinGW 64-bit terminal
-| - Install make with this command
-| `$pacman -S mingw-w64-x86_64-make`
- |  | 値3 |
+| Windows (MSYS2) | Linux <br>(Debian/Ubunty base distribution) | Linux <br>(Red Hat/CentOS base distribution) | macOS (Homebrew) |
+| -------------------| ------------------ | ---------------------- | --------------- |
+| - Download MSYS2 and install.<br>- Open MSYS2 MinGW 64-bit terminal.<br>- Install `make` with this command:<br>`$pacman -S mingw-w64-x86_64-make`  |  `$sudo apt-get update` <br>`$sudo apt-get install make` | `$sudo yum install make` | `$brew install make` <br>[Homebrew formula make Document](https://formulae.brew.sh/formula/make) |
 
 
-**Make command　& Makefile**
+**Make command  &  Makefile**
 
 The build process for the `make` command is defined in a `Makefile` located at the root of the repository.
 
