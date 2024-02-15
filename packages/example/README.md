@@ -235,7 +235,7 @@ Also if you want to see the progress of development compare each step by install
 >
 > #### [Authentication page (Login, Signup, and Reset-Password)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#authentication-page-login-signup-and-reset-password-1)
 >  - [Change main logo on header](#change-main-logo-oh-header)
->  - [Customize multiple login option](#customize-multiple-sign-in-potion)
+>  - [Customize multiple Login option](#customize-multiple-login-potion)
 >  - [Customize side content](#customize-side-content)
 >
 > #### [Create new page (Products page)](https://github.com/KeikoShimizu/APIHub-example/blob/master/packages/example/README.md#create-a-new-page-products-page)
@@ -420,7 +420,7 @@ export const LandingPageMain = () => {
 
 ## Authentication page (Login, Signup, and Reset-Password)
 
-### Change main logo oh Header
+### Change main logo on Header
 
 - Store a new Logo image inside `example/public` folder.
 - Modify the Logo image path inside `BrandLogo.js`. Once you change the path, all the Logo on the `Authentication` pages and `Header` will change (Except Landing page).
@@ -433,7 +433,7 @@ export const LandingPageMain = () => {
     };
 ```
 
-### Customize Multiple Sign-in potion
+### Customize Multiple Login option
 
 - We had multiple sign-in options in the original Example app. If you want to use or modify the multiple sign-in options which are used in the original Example app, refer `layer7-apihub/src/authentication/Login/AuthSchemeList.js` and implement in `layer7-apihub/src/authentication/Login/LoginForm.js`.
 
