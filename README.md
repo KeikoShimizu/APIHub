@@ -50,7 +50,7 @@ For more information about this testing, see [the Cypress - End-To-End Testing R
 
 ## Getting Start with API Hub 
 
-This topic is intended lead you to set local development environment to run the Layer7 API Hub app ( Example[BeSafe Bank] and Healthcare ). Follow the istruction before start:
+This topic is intended lead you to set local development environment to run the Layer7 API Hub app ( Example[BeSafe Bank] and Healthcare ). Follow the instruction before start:
 
 Prerequisites and folder structure are listed on 
 [Layer7 API Developer Portal - 5.2](https://techdocs.broadcom.com/us/en/ca-enterprise-software/layer7-api-management/api-developer-portal/5-2/api-hub/getting-started-with-api-hub.html)
@@ -67,7 +67,7 @@ To run the project locally on Mac OS, follow the steps below:
 
 **1. Clone the APIHub repository:**
 
-  This repository contain multiple projects as Monorepo. Clone Monorepo to access whole     projects. 
+  This repository contains multiple projects as Monorepo. Clone Monorepo to access whole projects. 
 
   ```sh
   $ git clone https://github.com/CAAPIM/APIHub.git
@@ -87,11 +87,11 @@ Install NVM on your machine to manage the Node JS version you want to run.
   ```sh
   $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
   ```
-- Close and re-open Terminal to check if NVM is correnctly installed.
+- Close and re-open Terminal to check if NVM is correctly installed.
 
-See the detail of NVM [NVM document & Troubleshooting](https://github.com/nvm-sh/nvm/blob/master/README.md) 
+See the details of NVM [NVM document & Troubleshooting](https://github.com/nvm-sh/nvm/blob/master/README.md) 
 
-**3. Start collect Node version**
+**3. Setting the node version**
 
 In the command line, navigate into the project `/APIHub` and run the following command to start using the correct node version:
 
@@ -99,11 +99,11 @@ In the command line, navigate into the project `/APIHub` and run the following c
 $ nvm use
 ```
 
-This is the way to use a specific Node.js version in conjunction with a `.nvmrc` file, which activates the Node.js version specified in the `.nvmrc` file.  This `$ nvm use` command need to run on the root directory.
+This is the way to use a specific Node.js version in conjunction with a `.nvmrc` file, which activates the Node.js version specified in the `.nvmrc` file.  This `$ nvm use` command needs to run on the root directory.
 
 The required Node version for this project is defined inside of `APIHub/.nvmrc` folder. 
 
-- Check current Node version are navigated with same version as on the `.nvmrc` file.
+- Check current Node version is navigated with the same version as on the `.nvmrc` file.
 
 ```sh
 $ node -v
@@ -111,8 +111,8 @@ $ node -v
 
 If the version of Node isn’t installed yet on your machine, follow the suggested command prompts to install that specific version. 
 
-   1. Check `APIHub/.nvmrc` file what Node version required to install. 
-   2. Install required Node version following command. (Node version v12.16.3)
+   1. Check `APIHub/.nvmrc` file what Node version is required to install. 
+   2. Install the required Node version following command. (Node version v12.16.3)
 
   ```sh
   $ nvm install v12.16.3
@@ -133,16 +133,16 @@ $ npm install --global yarn
 
 **5. Install GNU**
 
-GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. Make gets its knowledge of how to build your program from a file called the `Makefile`, which lists each of the non-source files and how to compute it from other files. `Makefile` is located on the root directory.
+GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files. Make gets its knowledge of how to build your program from a file called the `Makefile`, which lists each of the non-source files and how to compute it from other files. `Makefile` is located in the root directory.
 This allows you to build and install the project using `$make` command.
 
-See the detail of GNU [GNU operating system document](https://www.gnu.org/software/make/)
+See the details of GNU [GNU operating system document](https://www.gnu.org/software/make/)
 
-- Check if GNU in installled on your local eovironment.
+- Check if GNU is installed on your local environment.
 ```sh
 $ make -v
 ```
-- Installing GNU in deferent environment
+- GNU installation by deferent environment
   
 | Windows (MSYS2) | Linux <br>(Debian/Ubunty base distribution) | Linux <br>(Red Hat/CentOS base distribution) | macOS (Homebrew) |
 | -------------------| ------------------ | ---------------------- | --------------- |
@@ -243,13 +243,13 @@ DEPLOY_ENV=prod make copy-deploy-config-example
 ```
 
 - `$ make build` 
-This command executes to build `layer7-apihub` then `ayer7-apihub-mock`. `layer7-apihub-mock` is build only when `layer7-apihub` success to build.
+This command executes to build `layer7-apihub` then `layer7-apihub-mock`. `layer7-apihub-mock` is built only when `layer7-apihub` succeeds to build.
 
 - `$ make build-example` 
 This command executes to build `example`.
 
 - `DEPLOY_ENV=prod make copy-deploy-config-example`
-It is necessary to configure config-prod.js file inside of example>config before running this command.
+It is necessary to configure `config-prod.js` file inside of example>config before running this command.
 Instruction on [how to define a configuration](https://github.com/CAAPIM/APIHub/blob/master/packages/example/README.md#define-a-configuration-for-a-new-environment)
 
 
